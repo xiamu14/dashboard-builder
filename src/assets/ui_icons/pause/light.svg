@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/pause/light</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(-7.000000, -4.000000)" fill="#6F767E">
+            <path d="M8,4 C8.55228,4 9,4.447715 9,5 L9,19 C9,19.5523 8.55228,20 8,20 C7.447715,20 7,19.5523 7,19 L7,5 C7,4.447715 7.447715,4 8,4 Z" id="Vector-599-(Stroke)" transform="translate(8.000000, 12.000000) scale(1, -1) rotate(180.000000) translate(-8.000000, -12.000000) "></path>
+            <path d="M16,4 C16.55228,4 17,4.447715 17,5 L17,19 C17,19.5523 16.55228,20 16,20 C15.447715,20 15,19.5523 15,19 L15,5 C15,4.447715 15.447715,4 16,4 Z" id="Vector-600-(Stroke)" transform="translate(16.000000, 12.000000) scale(1, -1) rotate(180.000000) translate(-16.000000, -12.000000) "></path>
+        </g>
+    </g>
+</svg>

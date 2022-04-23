@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/flag/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Union" transform="translate(-3.000000, -2.000000)" fill="#6F767E">
+            <path d="M5,3 C5,2.447715 4.55228,2 4,2 C3.447715,2 3,2.447715 3,3 L3,4 L3,14 L3,21 C3,21.5523 3.447715,22 4,22 C4.55228,22 5,21.5523 5,21 L5,15 L10.02633,15 C10.67123,15 11.3119,15.104 11.9237,15.3079 L13.0763,15.6921 C13.6881,15.896 14.3288,16 14.9737,16 L18,16 C19.6569,16 21,14.6569 21,13 L21,7 C21,5.34315 19.6569,4 18,4 L14.9737,4 C14.3288,4 13.6881,3.89603 13.0763,3.6921 L11.9237,3.3079 C11.3119,3.10397 10.67123,3 10.02633,3 L5,3 Z"></path>
+        </g>
+    </g>
+</svg>

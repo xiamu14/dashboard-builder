@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/chevron_forward/light</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+    </defs>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-icon/chevron_forward/light" transform="translate(-7.000000, -4.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="UI-icon/chevron_forward/light-(clip-mask)" fill-rule="nonzero"></g>
+            <g id="UI-icon/chevron_forward/light-(clip-group)" mask="url(#mask-2)" fill="#6F767E">
+                <path d="M4.58580145,8.24998497 C4.9763261,7.85946095 5.60949015,7.85946095 6.0000208,8.24998497 L11.7929204,14.0428807 L17.5858301,8.24998497 C17.9763307,7.85946095 18.6095318,7.85946095 19.0000324,8.24998497 C19.3905331,8.64050889 19.3905331,9.27367175 19.0000324,9.66420167 L13.2071328,15.457092 C12.4260815,16.2381403 11.1597494,16.2381403 10.3787081,15.457092 L4.58580145,9.66420167 C4.1952767,9.27367175 4.1952767,8.64050889 4.58580145,8.24998497 Z" id="Vector-474-(Stroke)" transform="translate(11.792908, 11.999985) rotate(-90.000003) translate(-11.792908, -11.999985) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

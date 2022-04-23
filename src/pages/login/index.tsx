@@ -1,0 +1,142 @@
+import LogoApple from "@src/components/ui_icons/logo_apple";
+import LogoGoogle from "@src/components/ui_icons/logo_google";
+import MailLight from "@src/components/ui_icons/mail_light";
+import config from "@src/config";
+import { colors, DashboardEntryPath } from "@src/constant";
+import userModel from "@src/model/user";
+import { getHashParams } from "@src/utils";
+import React, { useCallback, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import CheckCircledLight from "../../components/ui_icons/check_circled_light";
+import "./index.scoped.scss";
+import { createWechatLoginUrl } from "./utils";
+
+const wechatLoginUrl = createWechatLoginUrl(config.wechatLoginUrlInfo);
+
+export default function Login() {
+  const [errorText, setErrorText] = useState<String>();
+  const [hideWechatLogin, setHideWechatLogin] = useState(true);
+  const history = useHistory();
+
+  const handleLogin = useCallback(
+    async (code: string) => {
+      console.log("debug code", code);
+      try {
+        const { data } = { data: { token: "" } };
+        console.log("debug response", data);
+        // NOTE: 更新 api authTOken
+        userModel.userToken = data.token;
+        // userModel.userInfo = data;
+        history.push(DashboardEntryPath);
+      } catch (error) {}
+    },
+    [history]
+  );
+
+  useEffect(() => {
+    if (userModel.isLogin) {
+      history.push(DashboardEntryPath);
+    } else {
+      const hashParams = getHashParams<{ code: string }>();
+      if (hashParams?.code) {
+        handleLogin(hashParams.code);
+      }
+    }
+  }, [handleLogin, history]);
+
+  const handleMockLogin = () => {
+    const { data } = {
+      data: {
+        token: "xxx-xxx-xxx",
+        id: "01",
+        alias: "text",
+        isActive: true,
+        role: "Admin" as "Admin",
+      },
+    };
+    console.log("debug response", data);
+    // NOTE: 更新 api authTOken
+    userModel.userToken = data.token;
+    userModel.userInfo = data;
+    history.push(DashboardEntryPath);
+  };
+
+  return (
+    <div className="login-page">
+      {!hideWechatLogin && (
+        <div className="login-box flex-center pt-40px">
+          <iframe
+            width="320"
+            height="440"
+            className="login-iframe"
+            src={wechatLoginUrl}
+            title="登录"
+            sandbox="allow-scripts allow-top-navigation allow-same-origin"
+          />
+        </div>
+      )}
+      <div className="w-full h-full flex">
+        <div className="side-info w-[28%] bg-neutral-02 flex-center">
+          <div className="logo" />
+          <div className="content">
+            <div className="illustration" />
+            <h4 className="title h-4">Plan includes</h4>
+            {[
+              "Unlimited product uploads",
+              "Pro tips",
+              "Free forever",
+              "Full author options",
+            ].map((item, index) => {
+              return (
+                <div key={index} className="detail flex items-center">
+                  <CheckCircledLight
+                    color={colors["primary-02"]}
+                    width={20}
+                    height={20}
+                  />
+                  <span className="detail-text">{item}</span>
+                </div>
+              );
+            })}
+            <div className="h-1" />
+          </div>
+        </div>
+        <div className="flex-1 container">
+          <div className="sign-in">
+            <span className="question">Already a member ?</span>
+            <span>Sign in</span>
+          </div>
+          <div className="sign-up flex flex-col w-full h-full">
+            <div className="content">
+              <h2 className="h-2 title">Sign Up</h2>
+              <p className="p-14 subtitle">Sign up with Open account</p>
+              <div className="methods">
+                <div className="method">
+                  <LogoGoogle width={24} height={24} />
+                  <span>Google</span>
+                </div>
+                <div className="method">
+                  <LogoApple width={24} height={24} />
+                  <span>Apple ID</span>
+                </div>
+              </div>
+              <div className="split-line" />
+              <p className="p-14 subtitle">Or continue with email address</p>
+              <div className="field-email">
+                <MailLight width={20} height={20} />
+                <input placeholder="Your email" />
+              </div>
+              <div className="btn-continue" onClick={handleMockLogin}>
+                Sign Up
+              </div>
+              <p className="tips">
+                This site is protected by reCAPTCHA and the Google Privacy
+                Policy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

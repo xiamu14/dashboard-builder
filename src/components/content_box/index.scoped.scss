@@ -1,0 +1,29 @@
+.motion-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: var(--neutral-02);
+  .content-box {
+    width: calc(100% - 2px);
+    display: flex;
+    height: 100%;
+    margin-left: 1px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    .content-wrapper {
+      padding: 28px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: flex-start;
+      .content-title {
+        height: 60px;
+        font-size: 24px;
+      }
+      .content {
+        width: 100%;
+        height: calc(100vh - 190px);
+      }
+    }
+  }
+}

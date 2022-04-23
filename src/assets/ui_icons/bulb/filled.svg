@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/bulb/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(-5.000000, -2.000000)" fill="#6F767E">
+            <path d="M9,21 C9,20.447715 9.447715,20 10,20 L14,20 C14.55228,20 15,20.447715 15,21 C15,21.55228 14.55228,22 14,22 L10,22 C9.447715,22 9,21.55228 9,21 Z" id="Vector-516-(Stroke)"></path>
+            <path d="M15.5,15.6403 C15.5,15.2834 15.6936,14.958 15.9869,14.7545 C17.8078,13.4905 19,11.38448 19,9 C19,5.13401 15.866,2 12,2 C8.13401,2 5,5.13401 5,9 C5,11.38448 6.19225,13.4905 8.01313,14.7544 C8.30638,14.958 8.5,15.2833 8.5,15.6403 L8.5,16 C8.5,17.3807 9.61929,18.5 11,18.5 L13,18.5 C14.38071,18.5 15.5,17.3807 15.5,16 L15.5,15.6403 Z" id="Union"></path>
+        </g>
+    </g>
+</svg>

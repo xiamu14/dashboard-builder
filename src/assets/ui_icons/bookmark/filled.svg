@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="20px" viewBox="0 0 16 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/bookmark/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Subtract" transform="translate(-4.000000, -2.000000)" fill="#6F767E">
+            <path d="M7,2 C5.34315,2 4,3.34315 4,5 L4,19 C4,21.0601 6.35191,22.2361 8,21 L11.7,18.225 C11.87778,18.0917 12.12222,18.0917 12.3,18.225 L16,21 C17.6481,22.2361 20,21.0601 20,19 L20,5 C20,3.34315 18.6569,2 17,2 L7,2 Z M9,6 C8.44772,6 8,6.44772 8,7 C8,7.55228 8.44772,8 9,8 L15,8 C15.5523,8 16,7.55228 16,7 C16,6.44772 15.5523,6 15,6 L9,6 Z"></path>
+        </g>
+    </g>
+</svg>

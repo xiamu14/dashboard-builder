@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/person/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(-3.000000, -2.000000)" fill="#6F767E" fill-rule="nonzero">
+            <g>
+                <path d="M3,18 L3,20 C3,21.10457 3.895431,22 5,22 L19,22 C20.1046,22 21,21.10457 21,20 L21,18 C21,15.23858 18.7614,13 16,13 L8,13 C5.23858,13 3,15.23858 3,18 Z" id="Vector-631"></path>
+                <path d="M16.5,6.5 C16.5,8.98528 14.48528,11 12,11 C9.51472,11 7.5,8.98528 7.5,6.5 C7.5,4.01472 9.51472,2 12,2 C14.48528,2 16.5,4.01472 16.5,6.5 Z" id="Ellipse-132"></path>
+            </g>
+        </g>
+    </g>
+</svg>

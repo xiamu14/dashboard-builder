@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="19px" viewBox="0 0 16 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/utensils/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(-4.000000, -3.000000)" fill="#6F767E" fill-rule="nonzero">
+            <g id="Union">
+                <path d="M20,21 C20,21.5523 19.5522809,22 19,22 C18.4477207,22 18,21.5523 18,21 L18,15 L15,15 C14.4477151,15 14,14.5523 14,14 L14,8 C14,5.23858 16.2385804,3 19,3 C19.5522909,3 20,3.447715 20,4 L20,21 Z"></path>
+                <path d="M6,4 C6,3.447715 5.55228,3 5,3 C4.447715,3 4,3.447715 4,4 L4,9 C4,10.86384 5.27477,12.42994 7,12.87398 L7,21 C7,21.5523 7.44772,22 8,22 C8.55228,22 9,21.5523 9,21 L9,12.87398 C10.72523,12.42994 12,10.86384 12,9 L12,4 C12,3.447715 11.55228,3 11,3 C10.44772,3 10,3.447715 10,4 L10,8 L9,8 L9,4 C9,3.447715 8.55228,3 8,3 C7.44772,3 7,3.447715 7,4 L7,8 L6,8 L6,4 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

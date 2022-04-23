@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="22px" viewBox="0 0 18 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/shield/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle" transform="translate(-3.000000, -1.000000)" fill="#6F767E">
+            <path d="M3,6.59549492 C3,5.27954318 3.82629,4.11122825 5.05132,3.69508956 L11.05131,1.65689047 C11.66711,1.44770318 12.33288,1.44770318 12.94868,1.65689047 L18.9487,3.69508956 C20.1737,4.11122825 21,5.27954318 21,6.59549492 L21,12.0351575 C21,17.6422376 15.4398,21.0457209 13.0601,22.2457094 C12.38748,22.5847635 11.61252,22.5847635 10.93993,22.2457094 C8.56019,21.0457209 3,17.6422376 3,12.0351575 L3,6.59549492 Z"></path>
+        </g>
+    </g>
+</svg>

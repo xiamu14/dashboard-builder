@@ -1,0 +1,22 @@
+import * as React from "react";
+import { SVGProps } from "react";
+
+const FileAddLight = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="1em"
+    height="1em"
+    viewBox="0 0 18 20"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <g fill={props.color || "#6F767E"} fillRule="evenodd">
+      <path d="M18 17a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3h10l.01.01A3 3 0 0 1 14.88.88L17.12 3.12a3 3 0 0 1 .868 1.868L18 5v12Zm-3 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h9v2a2 2 0 0 0 2 2h2v11a1 1 0 0 1-1 1Z" />
+      <path
+        d="M10 8a1 1 0 0 0-2 0v2H6a1 1 0 0 0 0 2h2v2a1 1 0 1 0 2 0v-2h2a1 1 0 0 0 0-2h-2V8Z"
+        fillRule="nonzero"
+      />
+    </g>
+  </svg>
+);
+
+export default FileAddLight;

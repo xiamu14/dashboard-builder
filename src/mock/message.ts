@@ -1,0 +1,28 @@
+export const messageGroupList = [
+  {
+    id: 0,
+    name: "周二定时群发",
+    type: "wxapp",
+    createAt: "2021-11-05 17:52:33",
+    sendAt: "2021-11-05 18:52:33",
+    wxGroup: ["开单伙伴+", "引流开单"],
+    userGroup: "全量",
+    status: "已发送",
+    total: 120120120,
+    pv: 123123,
+    uv: 92134234,
+  },
+  {
+    id: 1,
+    name: "周二定时群发",
+    type: "图文消息",
+    createAt: "2021-11-05 17:52:33",
+    sendAt: "2021-11-05 18:52:33",
+    wxGroup: ["开单伙伴+", "引流开单"],
+    userGroup: "全量",
+    status: "已发送",
+    total: 120120120,
+    pv: 123123,
+    uv: 92134234,
+  },
+];

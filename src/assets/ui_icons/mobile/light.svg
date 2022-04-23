@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/mobile/light</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-Copy-228-(Stroke)" transform="translate(-5.000000, -2.000000)" fill="#6F767E">
+            <path d="M9,4 L8,4 C7.44771,4 7,4.44772 7,5 L7,19 C7,19.5523 7.44772,20 8,20 L16,20 C16.5523,20 17,19.5523 17,19 L17,5 C17,4.44772 16.5523,4 16,4 L15,4 C15,4.82843 14.32843,5.5 13.5,5.5 L10.5,5.5 C9.67157,5.5 9,4.82843 9,4 Z M16,2 C17.6569,2 19,3.34315 19,5 L19,19 C19,20.6569 17.6569,22 16,22 L8,22 C6.34315,22 5,20.6569 5,19 L5,5 C5,3.34315 6.34315,2 8,2 L16,2 Z"></path>
+        </g>
+    </g>
+</svg>

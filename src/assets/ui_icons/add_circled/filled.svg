@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/add_circled/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Subtract" transform="translate(-2.000000, -2.000000)" fill="#6F767E">
+            <path d="M12,22 C17.5228,22 22,17.5228 22,12 C22,6.47715 17.5228,2 12,2 C6.47715,2 2,6.47715 2,12 C2,17.5228 6.47715,22 12,22 Z M12,7 C12.5523,7 13,7.44772 13,8 L13,11 L16,11 C16.5523,11 17,11.44772 17,12 C17,12.5523 16.5523,13 16,13 L13,13 L13,16 C13,16.5523 12.5523,17 12,17 C11.44771,17 11,16.5523 11,16 L11,13 L8,13 C7.44772,13 7,12.5523 7,12 C7,11.44772 7.44772,11 8,11 L11,11 L11,8 C11,7.44772 11.44772,7 12,7 Z"></path>
+        </g>
+    </g>
+</svg>

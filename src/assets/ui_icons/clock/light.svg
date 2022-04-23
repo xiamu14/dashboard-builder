@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/clock/light</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-icon/clock/light" transform="translate(-2.000000, -2.000000)" fill="#6F767E">
+            <path d="M12,20 C16.4183,20 20,16.4183 20,12 C20,7.58172 16.4183,4 12,4 C7.58172,4 4,7.58172 4,12 C4,16.4183 7.58172,20 12,20 Z M12,22 C17.5228,22 22,17.5228 22,12 C22,6.47715 17.5228,2 12,2 C6.47715,2 2,6.47715 2,12 C2,17.5228 6.47715,22 12,22 Z" id="Ellipse-134-(Stroke)"></path>
+            <path d="M12,6 C12.55228,6 13,6.447715 13,7 L13,11.58579 L15.20711,13.79289 C15.59763,14.18342 15.59763,14.81658 15.20711,15.20711 C14.81658,15.59763 14.18342,15.59763 13.79289,15.20711 L11.585786,13 C11.210714,12.62493 11,12.11622 11,11.58579 L11,7 C11,6.447715 11.447715,6 12,6 Z" id="Vector-479-(Stroke)"></path>
+        </g>
+    </g>
+</svg>

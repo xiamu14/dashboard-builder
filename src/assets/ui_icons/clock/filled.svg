@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/clock/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Subtract" transform="translate(-2.000000, -2.000000)" fill="#6F767E">
+            <path d="M12,22 C17.5228,22 22,17.5228 22,12 C22,6.47715 17.5228,2 12,2 C6.47715,2 2,6.47715 2,12 C2,17.5228 6.47715,22 12,22 Z M13,7 C13,6.44772 12.5523,6 12,6 C11.44771,6 11,6.44772 11,7 L11,11.58579 C11,12.1162 11.21071,12.6249 11.58579,13 L13.7929,15.2071 C14.1834,15.5976 14.8166,15.5976 15.2071,15.2071 C15.5976,14.8166 15.5976,14.1834 15.2071,13.7929 L13,11.58579 L13,7 Z"></path>
+        </g>
+    </g>
+</svg>

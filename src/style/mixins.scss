@@ -1,0 +1,44 @@
+@mixin media-breakpoint($breakpoint) {
+  // $breakpoint is simply a variable that can have several values
+
+  @if $breakpoint==lg {
+    // here `laptop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xl {
+    // here `laptop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xxl {
+    // here `laptop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+@mixin scrollbar() {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #eee;
+    border-radius: 10px;
+  }
+}

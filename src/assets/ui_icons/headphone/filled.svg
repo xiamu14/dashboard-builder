@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/headphone/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(-2.000000, -2.000000)" fill="#6F767E" fill-rule="nonzero">
+            <g id="Union">
+                <path d="M4,12 C4,7.58172 7.58172,4 12,4 C16.4183,4 20,7.58172 20,12 L18,12 C16.3431,12 15,13.3431 15,15 L15,18 C15,19.6569 16.3431,21 18,21 L19,21 C20.6569,21 22,19.6569 22,18 L22,12 C22,6.47715 17.5228,2 12,2 C6.47715,2 2,6.47715 2,12 L2,18 C2,19.6569 3.34315,21 5,21 L6,21 C7.65685,21 9,19.6569 9,18 L9,15 C9,13.3431 7.65685,12 6,12 L4,12 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

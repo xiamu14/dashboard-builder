@@ -1,0 +1,40 @@
+body,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link,
+.ant-select-multiple .ant-select-selection-item-remove,
+.ant-message-custom-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  html {
+    font-size: 144px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 170px;
+  }
+}
+
+div {
+  box-sizing: border-box;
+}

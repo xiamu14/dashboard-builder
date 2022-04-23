@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="16px" viewBox="0 0 9 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/chevron_forward/filled</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="24" height="24"></rect>
+    </defs>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI-icon/chevron_forward/filled" transform="translate(-7.000000, -4.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="UI-icon/chevron_forward/filled-(clip-mask)" fill-rule="nonzero"></g>
+            <g id="UI-icon/chevron_forward/filled-(clip-group)" mask="url(#mask-2)" fill="#6F767E">
+                <path d="M4.58578619,8.25000023 C4.97631084,7.85947621 5.6094749,7.85947621 6.00000554,8.25000023 L11.7929052,14.042896 L17.5858148,8.25000023 C17.9763154,7.85947621 18.6095165,7.85947621 19.0000171,8.25000023 C19.3905178,8.64052415 19.3905178,9.27368701 19.0000171,9.66421693 L13.2071175,15.4571072 C12.4260662,16.2381555 11.1597341,16.2381555 10.3786928,15.4571072 L4.58578619,9.66421693 C4.19526145,9.27368701 4.19526145,8.64052415 4.58578619,8.25000023 Z" id="Vector-474-(Stroke)" transform="translate(11.792893, 12.000000) rotate(-90.000003) translate(-11.792893, -12.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

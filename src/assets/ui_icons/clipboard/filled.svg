@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="21px" viewBox="0 0 18 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/clipboard/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Subtract" transform="translate(-3.000000, -1.000000)" fill="#6F767E">
+            <path d="M12,1 C13.1046,1 14,1.895431 14,3 L18,3 C19.6569,3 21,4.34315 21,6 L21,19 C21,20.6569 19.6569,22 18,22 L6,22 C4.34315,22 3,20.6569 3,19 L3,6 C3,4.34315 4.34315,3 6,3 L10,3 C10,1.895431 10.89543,1 12,1 Z M7,11 C7,10.44771 7.44772,10 8,10 L16,10 C16.5523,10 17,10.44771 17,11 C17,11.5523 16.5523,12 16,12 L8,12 C7.44772,12 7,11.5523 7,11 Z M8,14 C7.44772,14 7,14.4477 7,15 C7,15.5523 7.44772,16 8,16 L12,16 C12.55228,16 13,15.5523 13,15 C13,14.4477 12.55228,14 12,14 L8,14 Z"></path>
+        </g>
+    </g>
+</svg>

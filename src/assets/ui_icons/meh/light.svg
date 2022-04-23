@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/meh/light</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(-2.000000, -2.000000)" fill="#6F767E">
+            <path d="M12,20 C16.4183,20 20,16.4183 20,12 C20,7.58172 16.4183,4 12,4 C7.58172,4 4,7.58172 4,12 C4,16.4183 7.58172,20 12,20 Z M12,22 C17.5228,22 22,17.5228 22,12 C22,6.47715 17.5228,2 12,2 C6.47715,2 2,6.47715 2,12 C2,17.5228 6.47715,22 12,22 Z" id="Ellipse-201-(Stroke)"></path>
+            <path d="M9,9 C9,9.55228 8.55228,10 8,10 C7.447715,10 7,9.55228 7,9 C7,8.447715 7.447715,8 8,8 C8.55228,8 9,8.447715 9,9 Z" id="Ellipse-202" fill-rule="nonzero"></path>
+            <path d="M17,9 C17,9.55228 16.55228,10 16,10 C15.447715,10 15,9.55228 15,9 C15,8.447715 15.447715,8 16,8 C16.55228,8 17,8.447715 17,9 Z" id="Ellipse-203" fill-rule="nonzero"></path>
+            <path d="M7,15 C7,14.447715 7.447715,14 8,14 L16,14 C16.55229,14 17,14.447715 17,15 C17,15.55228 16.55229,16 16,16 L8,16 C7.447715,16 7,15.55228 7,15 Z" id="Vector-671-(Stroke)"></path>
+        </g>
+    </g>
+</svg>

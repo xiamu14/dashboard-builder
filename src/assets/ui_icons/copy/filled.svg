@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/copy/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(-3.000000, -3.000000)" fill="#6F767E">
+            <path d="M14,5 L6,5 C5.44772,5 5,5.44772 5,6 L5,14 C5,14.5523 5.44772,15 6,15 L14,15 C14.5523,15 15,14.5523 15,14 L15,6 C15,5.44772 14.5523,5 14,5 Z M6,3 C4.34315,3 3,4.34315 3,6 L3,14 C3,15.6569 4.34315,17 6,17 L14,17 C15.6569,17 17,15.6569 17,14 L17,6 C17,4.34315 15.6569,3 14,3 L6,3 Z" id="Rectangle-324-(Stroke)"></path>
+            <path d="M7,10 C7,8.34315 8.34315,7 10,7 L18,7 C19.6569,7 21,8.34315 21,10 L21,18 C21,19.6569 19.6569,21 18,21 L10,21 C8.34315,21 7,19.6569 7,18 L7,10 Z" id="Rectangle-323" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

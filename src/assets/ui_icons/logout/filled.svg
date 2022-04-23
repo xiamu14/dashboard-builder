@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/logout/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(-3.000000, -2.000000)" fill="#6F767E" fill-rule="nonzero">
+            <g id="Union" transform="translate(3.000000, 2.000000)">
+                <path d="M9,0 C10.6569,0 12,1.34315 12,3 L12,9 L7,9 C6.44772,9 6,9.44771 6,10 C6,10.5523 6.44772,11 7,11 L12,11 L12,17 C12,18.6569 10.6569,20 9,20 L3,20 C1.34315,20 0,18.6569 0,17 L0,3 C0,1.34315 1.34315,0 3,0 L9,0 Z" id="57389F55-BA48-43AB-A25D-A1BFE13F4514"></path>
+                <path d="M12,11 L15.0858,11 L13.2929,12.7929 C12.9024,13.1834 12.9024,13.8166 13.2929,14.2071 C13.6834,14.5976 14.3166,14.5976 14.7071,14.2071 L17.5,11.4142 C18.2811,10.6332 18.281,9.36683 17.5,8.58579 L14.7071,5.79289 C14.3166,5.40237 13.6834,5.40237 13.2929,5.79289 C12.9024,6.18342 12.9024,6.81658 13.2929,7.20711 L15.0858,9 L12,9 L12,11 Z" id="CAB51EAE-822C-4AE3-B953-76C6E4651B3F"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="14px" viewBox="0 0 20 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI icon/leaderboard/filled</title>
+    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(-2.000000, -5.000000)" fill="#6F767E" fill-rule="nonzero">
+            <g>
+                <path d="M9,7 C9,5.89543 9.895431,5 11,5 L13,5 C14.10457,5 15,5.895431 15,7 L15,18 C15,18.5523 14.55228,19 14,19 L10,19 C9.447715,19 9,18.5523 9,18 L9,7 Z" id="Rectangle-260"></path>
+                <path d="M17,13 C17,12.447715 17.447715,12 18,12 L20,12 C21.10457,12 22,12.895431 22,14 L22,18 C22,18.55228 21.55228,19 21,19 L18,19 C17.447715,19 17,18.55228 17,18 L17,13 Z" id="Rectangle-261"></path>
+                <path d="M2,12 C2,10.89543 2.895431,10 4,10 L6,10 C6.55228,10 7,10.447715 7,11 L7,18 C7,18.55229 6.55228,19 6,19 L3,19 C2.447715,19 2,18.55229 2,18 L2,12 Z" id="Rectangle-259"></path>
+            </g>
+        </g>
+    </g>
+</svg>
