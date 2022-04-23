@@ -3,6 +3,7 @@ import ContentBox from "@src/components/content_box";
 import { Space, TableColumnsType, Tag } from "antd";
 import React from "react";
 import "./index.scoped.scss";
+import ProductViewsBarChart from "./product_views_bar_chart";
 
 interface User {
   name: string;
@@ -104,7 +105,9 @@ export default function TableBase() {
         <div className="grid">
           <div className="grid-item-1" />
           <div className="grid-item-2" />
-          <div className="grid-item-3" />
+          <div className="grid-item-3">
+            <ProductViewsBarChart />
+          </div>
           <div className="grid-item-4">
             <Table
               rowKey="key"

@@ -1,9 +1,8 @@
-import { ExportOutlined, UserOutlined } from "@ant-design/icons";
 import { LoginPath } from "@src/constant";
 import { useUserInfo } from "@src/hooks/use_user_info";
 import userModel from "@src/model/user";
 import RouterPro from "@src/pages/dashboard/router";
-import { Layout, Popconfirm } from "antd";
+import { Layout } from "antd";
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "./index.scoped.scss";
@@ -40,22 +39,6 @@ export default function Dashboard() {
         <div className="menu-box overflow-y-scroll overflow-x-hidden">
           <MenuPro />
         </div>
-        {userInfo ? (
-          <div className="info-box">
-            <div className="info">
-              <UserOutlined />
-            </div>
-            <Popconfirm
-              title="你确定要退出吗？"
-              onConfirm={handleExit}
-              placement="rightBottom"
-              okText="确定"
-              cancelText="取消"
-            >
-              <ExportOutlined className="btn-exit" />
-            </Popconfirm>
-          </div>
-        ) : null}
       </Sider>
       <Layout className="dashboard-content">
         <RouterPro />
