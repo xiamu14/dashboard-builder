@@ -1,13 +1,13 @@
-import LogoApple from "@src/components/ui_icons/logo_apple";
-import LogoGoogle from "@src/components/ui_icons/logo_google";
-import MailLight from "@src/components/ui_icons/mail_light";
 import config from "@src/config";
 import { colors, DashboardEntryPath } from "@src/constant";
 import userModel from "@src/model/user";
 import { getHashParams } from "@src/utils";
+import CheckCircledLight from "maple-icons/dist/check_circled_light";
+import LogoApple from "maple-icons/dist/logo_apple";
+import LogoGoogle from "maple-icons/dist/logo_google";
+import MailLight from "maple-icons/dist/mail_light";
 import React, { useCallback, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import CheckCircledLight from "../../components/ui_icons/check_circled_light";
 import "./index.scoped.scss";
 import { createWechatLoginUrl } from "./utils";
 

@@ -1,8 +1,8 @@
-import AddLight from "@src/components/ui_icons/add_light";
-import MessageLight from "@src/components/ui_icons/message_light";
-import NotificationLight from "@src/components/ui_icons/notification_light";
-import SearchLight from "@src/components/ui_icons/search_light";
 import { Avatar, Badge, Space } from "antd";
+import AddLight from "maple-icons/dist/add_light";
+import MessageLight from "maple-icons/dist/message_light";
+import NotificationLight from "maple-icons/dist/notification_light";
+import SearchLight from "maple-icons/dist/search_light";
 import React from "react";
 import "./index.coped.scss";
 const Header = () => {

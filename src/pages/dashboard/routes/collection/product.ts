@@ -1,5 +1,5 @@
-import DiamondLight from "@src/components/ui_icons/diamond_light";
 import Table from "@src/pages/dashboard/components/table_base";
+import DiamondLight from "maple-icons/dist/diamond_light";
 import { createRoutes } from "../utils";
 
 const power = "products";

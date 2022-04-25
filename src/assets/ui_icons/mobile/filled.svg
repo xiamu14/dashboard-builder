@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>UI icon/mobile/filled</title>
-    <g id="👀-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Subtract" transform="translate(-5.000000, -2.000000)" fill="#6F767E">
-            <path d="M8,2 C6.34315,2 5,3.34315 5,5 L5,19 C5,20.6569 6.34315,22 8,22 L16,22 C17.6569,22 19,20.6569 19,19 L19,5 C19,3.34315 17.6569,2 16,2 L8,2 Z M8.83333,3.5 C8.64924,3.5 8.5,3.64924 8.5,3.83333 C8.5,4.75381 9.24619,5.5 10.16667,5.5 L13.83333,5.5 C14.75381,5.5 15.5,4.75381 15.5,3.83333 C15.5,3.64924 15.3508,3.5 15.1667,3.5 L8.83333,3.5 Z"></path>
-        </g>
-    </g>
-</svg>
