@@ -46,14 +46,18 @@ const data = [
   },
 ];
 
-const TinyLineChart = React.memo(() => {
+interface Props {
+  stroke: string;
+}
+
+const TinyLineChart = React.memo(({ stroke }: Props) => {
   return (
     <LineChart width={84} height={40} data={data}>
       <Line
         dot={false}
         type="monotone"
         dataKey="pv"
-        stroke="#8884d8"
+        stroke={stroke}
         strokeWidth={3}
       />
     </LineChart>

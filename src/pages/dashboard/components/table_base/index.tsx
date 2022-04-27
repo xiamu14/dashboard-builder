@@ -4,6 +4,9 @@ import Statistic from "@src/components/statistic";
 import { colors } from "@src/constant";
 // import { Table } from "antd";
 import { Space, Table, TableColumnsType, Tag } from "antd";
+import ActivityLight from "maple-icons/dist/activity_light";
+import PaymentLight from "maple-icons/dist/payment_light";
+import ShoppingBagLight from "maple-icons/dist/shopping_bag_light";
 import React from "react";
 import "./index.scoped.scss";
 import ProductViewsBarChart from "./product_views_bar_chart";
@@ -110,8 +113,58 @@ export default function TableBase() {
         <div className="grid">
           <div className="grid-item-1 shared-block">
             <BlockHeader bgColor={colors["secondary-02"]} title="Overview" />
-            <div className="statistic-box">
-              <Statistic />
+            <div className="statistic-box flex justify-between">
+              <Statistic
+                icon={
+                  <ActivityLight
+                    color={colors["neutral-01"]}
+                    width={20}
+                    height={20}
+                  />
+                }
+                bgColor={colors["secondary-04"]}
+                lineChartProps={{ stroke: colors["primary-02"] }}
+                info="Earing"
+                number="128"
+                changeProps={{
+                  upOrDown: 1,
+                  percent: 34.5,
+                }}
+              />
+              <Statistic
+                icon={
+                  <PaymentLight
+                    color={colors["neutral-01"]}
+                    width={20}
+                    height={20}
+                  />
+                }
+                bgColor={colors["secondary-03"]}
+                lineChartProps={{ stroke: colors["primary-01"] }}
+                info="Earing"
+                number="128"
+                changeProps={{
+                  upOrDown: 1,
+                  percent: 34.5,
+                }}
+              />
+              <Statistic
+                icon={
+                  <ShoppingBagLight
+                    color={colors["neutral-01"]}
+                    width={20}
+                    height={20}
+                  />
+                }
+                bgColor={colors["secondary-02"]}
+                lineChartProps={{ stroke: colors["primary-04"] }}
+                info="Earing"
+                number="128"
+                changeProps={{
+                  upOrDown: 1,
+                  percent: 34.5,
+                }}
+              />
             </div>
           </div>
           <div className="grid-item-2 shared-block">
