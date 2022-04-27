@@ -1,5 +1,5 @@
 .statistic-box {
-  min-width: 300px;
+  width: unset;
   height: 224px;
   border-radius: 12px;
   display: flex;
@@ -22,7 +22,7 @@
       font-size: 48px;
       line-height: 1;
       color: var(--neutral-07);
-      margin: 2px 0;
+      margin: 2px 0 6px;
     }
     .change-box {
       display: flex;

@@ -123,6 +123,7 @@ export default function TableBase() {
                   />
                 }
                 bgColor={colors["secondary-04"]}
+                style={{ width: "32%" }}
                 lineChartProps={{ stroke: colors["primary-02"] }}
                 info="Earing"
                 number="128"
@@ -140,8 +141,9 @@ export default function TableBase() {
                   />
                 }
                 bgColor={colors["secondary-03"]}
+                style={{ width: "32%" }}
                 lineChartProps={{ stroke: colors["primary-01"] }}
-                info="Earing"
+                info="Customer"
                 number="128"
                 changeProps={{
                   upOrDown: 1,
@@ -157,8 +159,9 @@ export default function TableBase() {
                   />
                 }
                 bgColor={colors["secondary-02"]}
+                style={{ width: "32%" }}
                 lineChartProps={{ stroke: colors["primary-04"] }}
-                info="Earing"
+                info="Payouts"
                 number="128"
                 changeProps={{
                   upOrDown: 1,

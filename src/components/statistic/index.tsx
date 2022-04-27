@@ -17,14 +17,23 @@ interface Props {
   lineChartProps: {
     stroke: string;
   };
+  style?: React.CSSProperties;
 }
 
 const Statistic = React.memo(
-  ({ icon, bgColor, info, number, changeProps, lineChartProps }: Props) => {
+  ({
+    icon,
+    bgColor,
+    info,
+    style,
+    number,
+    changeProps,
+    lineChartProps,
+  }: Props) => {
     return (
       <div
         className="flex statistic-box"
-        style={{ backgroundColor: rgba(bgColor, 0.25) }}
+        style={{ backgroundColor: rgba(bgColor, 0.25), ...style }}
       >
         <div className="weekly-data">
           <div className="icon-box">{icon}</div>
