@@ -1,0 +1,17 @@
+.block-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 36px;
+  .color-block {
+    width: 16px;
+    height: 32px;
+    margin-right: 16px;
+    border-radius: 4px;
+  }
+  .title {
+    font-size: 20px;
+    color: var(--neutral-07);
+    line-height: 32px;
+  }
+}

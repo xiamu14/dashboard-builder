@@ -1,6 +1,9 @@
-import { Table } from "@antd-hero/components";
+import BlockHeader from "@src/components/block_header";
 import ContentBox from "@src/components/content_box";
-import { Space, TableColumnsType, Tag } from "antd";
+import Statistic from "@src/components/statistic";
+import { colors } from "@src/constant";
+// import { Table } from "antd";
+import { Space, Table, TableColumnsType, Tag } from "antd";
 import React from "react";
 import "./index.scoped.scss";
 import ProductViewsBarChart from "./product_views_bar_chart";
@@ -12,31 +15,58 @@ interface User {
   tags: string[];
 }
 
+const data = [
+  {
+    key: "1",
+    name: "John Brown",
+    age: 32,
+    lifeProcess: "00.1",
+    address: "New York No. 1 Lake Park",
+    tags: ["nice", "developer"],
+  },
+  {
+    key: "2",
+    name: "Jim Green",
+    age: 42,
+    lifeProcess: 1,
+    address: "London No. 1 Lake Park",
+    tags: ["loser"],
+  },
+  {
+    key: "3",
+    name: "Joe Black",
+    age: 32,
+    lifeProcess: 0.01,
+    address: "Sidney No. 1 Lake Park",
+    tags: ["cool", "teacher"],
+  },
+];
+
 export default function TableBase() {
   const columns: TableColumnsType<User> = [
     {
-      title: "Name",
+      title: "Product",
       dataIndex: "name",
       key: "name",
       render: (text: string) => <a>{text}</a>,
     },
     {
-      title: "Age",
+      title: "Status",
       dataIndex: "age",
       key: "age",
     },
     {
-      title: "Life Process",
+      title: "Price",
       dataIndex: "lifeProcess",
       key: "lifeProcess",
     },
     {
-      title: "Address",
+      title: "Sales",
       dataIndex: "address",
       key: "address",
     },
     {
-      title: "Tags",
+      title: "Views",
       key: "tags",
       dataIndex: "tags",
       render: (tags: string[]) => (
@@ -56,7 +86,7 @@ export default function TableBase() {
       ),
     },
     {
-      title: "Action",
+      title: "Likes",
       key: "action",
       render: (_, record) => (
         <Space size="middle">
@@ -69,32 +99,7 @@ export default function TableBase() {
 
   const fetchTableData = async () => {
     return {
-      data: [
-        {
-          key: "1",
-          name: "John Brown",
-          age: 32,
-          lifeProcess: "00.1",
-          address: "New York No. 1 Lake Park",
-          tags: ["nice", "developer"],
-        },
-        {
-          key: "2",
-          name: "Jim Green",
-          age: 42,
-          lifeProcess: 1,
-          address: "London No. 1 Lake Park",
-          tags: ["loser"],
-        },
-        {
-          key: "3",
-          name: "Joe Black",
-          age: 32,
-          lifeProcess: 0.01,
-          address: "Sidney No. 1 Lake Park",
-          tags: ["cool", "teacher"],
-        },
-      ],
+      data: data,
       total: 3,
     };
   };
@@ -103,17 +108,32 @@ export default function TableBase() {
     <ContentBox>
       <div className="h-full max-h-full overflow-y-scroll">
         <div className="grid">
-          <div className="grid-item-1" />
-          <div className="grid-item-2" />
-          <div className="grid-item-3">
-            <ProductViewsBarChart />
+          <div className="grid-item-1 shared-block">
+            <BlockHeader bgColor={colors["secondary-02"]} title="Overview" />
+            <div className="statistic-box">
+              <Statistic />
+            </div>
           </div>
-          <div className="grid-item-4">
-            <Table
-              rowKey="key"
-              columns={columns}
-              fetchTableData={fetchTableData}
+          <div className="grid-item-2 shared-block">
+            <BlockHeader
+              bgColor={colors["secondary-04"]}
+              title="Product activity"
             />
+          </div>
+          <div className="grid-item-3 shared-block">
+            <BlockHeader
+              bgColor={colors["secondary-03"]}
+              title="Product views"
+            />
+            <div className="w-full h-180px">
+              <ProductViewsBarChart />
+            </div>
+          </div>
+          <div className="grid-item-4 shared-block">
+            <BlockHeader bgColor={colors["secondary-02"]} title="Products" />
+            <div className="flex-1">
+              <Table rowKey="key" columns={columns} dataSource={data} />
+            </div>
           </div>
         </div>
       </div>

@@ -2,9 +2,8 @@ import _generate from "@babel/generator";
 import { parse } from "@babel/parser";
 import _traverse from "@babel/traverse";
 import * as t from "@babel/types";
-import { transform } from "@svgr/core";
 import { defineConfig } from "codegem";
-import loadFile, { FileInfoType } from "codegem-load-file";
+import loadFile from "codegem-load-file";
 import fs from "fs";
 import { createRequire } from "module";
 import path from "path";
@@ -29,10 +28,6 @@ export default defineConfig({
       use: [loadFile(`${config.routePath}/collection`)],
       machine: createRouter(),
     },
-    // {
-    //   use: [loadFile(`./src/assets/ui_icons`)],
-    //   machine: createSvgComp("./src/components/ui_icons"),
-    // },
     {
       use: [loadFile("./src/style/color_variable.css")],
       machine: createColorVariable(),
@@ -157,61 +152,6 @@ function createRouter() {
   };
 }
 
-function createSvgComp(output: string) {
-  return (source: any[]) => {
-    console.log(source[0].filesInfo[0]);
-
-    //   {path: '/Users/ben/Documents/workspace/project/antd-hero/preview/src/assets/ui_icons/activity/filled.svg',
-    // root: '/',
-    // dir: '/Users/ben/Documents/workspace/project/antd-hero/preview/src/assets/ui_icons/activity',
-    // base: 'filled.svg',
-    // ext: '.svg',
-    // name: 'filled'}
-
-    const result = source[0].filesInfo
-      .filter((it: FileInfoType) => {
-        return it.ext === ".svg";
-      })
-      .map((fileInfo: FileInfoType) => {
-        const svgName = fileInfo.dir.split(path.sep).slice(-1);
-        const svgStyle = fileInfo.name;
-
-        // 获取文件名 activity_filled.tsx
-        const generatedFileName = `${svgName}_${svgStyle}`;
-        // 导出的默认组件名 ActivityFilled
-        const exportComponentName = toHump(generatedFileName);
-
-        const svgCode = fs.readFileSync(fileInfo.path, "utf-8");
-        try {
-          const jsCode = transform.sync(
-            svgCode,
-            {
-              plugins: [
-                "@svgr/plugin-svgo",
-                "@svgr/plugin-jsx",
-                "@svgr/plugin-prettier",
-              ],
-              icon: true,
-              typescript: true,
-              replaceAttrValues: { "#6F767E": '{props.color || "#6F767E"}' },
-            },
-            { componentName: exportComponentName }
-          );
-
-          return {
-            pathname: path.resolve(output, `${generatedFileName}.tsx`),
-            code: jsCode,
-          };
-        } catch (error) {
-          console.error(error);
-        }
-
-        return [];
-      });
-    return result;
-  };
-}
-
 function createColorVariable() {
   return (source: any[]) => {
     // TODO: 正则解析出 css 里的变量
@@ -225,18 +165,6 @@ function createColorVariable() {
       },
     ];
   };
-}
-
-// 下划线转驼峰
-function toHump(name) {
-  return name
-    .split("_")
-    .map((it) => {
-      return it.replace(/^\w/g, (it) => {
-        return it.toUpperCase();
-      });
-    })
-    .join("");
 }
 
 // 获取全部的 color variables

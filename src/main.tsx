@@ -8,6 +8,7 @@ import "virtual:windi.css";
 import App from "./app";
 import "./style/color_variable.css";
 import "./style/common.css";
+import "./style/shared.scss";
 
 ReactDOM.render(
   <React.StrictMode>
