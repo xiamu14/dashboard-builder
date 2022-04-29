@@ -193,7 +193,12 @@ export default function TableBase() {
           <div className="grid-item-4 shared-block">
             <BlockHeader bgColor={colors["secondary-02"]} title="Products" />
             <div className="flex-1">
-              <Table rowKey="key" columns={columns} dataSource={data} />
+              <Table
+                rowKey="key"
+                columns={columns}
+                dataSource={data}
+                pagination={{ size: "small", hideOnSinglePage: true }}
+              />
             </div>
           </div>
         </div>

@@ -33,14 +33,18 @@ a {
   width: 0;
 }
 
-.ant-pagination-prev .ant-pagination-item-link,
+.ant-table-tbody > tr:last-child > td {
+  border-bottom-width: 0;
+}
+
+/* .ant-pagination-prev .ant-pagination-item-link,
 .ant-pagination-next .ant-pagination-item-link {
   border-radius: 50%;
 }
 
 .ant-pagination-item {
   border-radius: 50%;
-}
+} */
 
 .ant-table-pagination {
   justify-content: center;
