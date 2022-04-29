@@ -1,6 +1,6 @@
-import { colors } from "@src/constant";
+import AspectDiv from "@src/components/aspect_div";
+import TrendTips from "@src/components/trend_tips";
 import { rgba } from "@src/utils/css";
-import ArrowDownLight from "maple-icons/dist/arrow_down_light";
 import React from "react";
 import "./index.scoped.scss";
 import TinyLineChart from "./tiny_line_chart";
@@ -17,7 +17,9 @@ interface Props {
   lineChartProps: {
     stroke: string;
   };
-  style?: React.CSSProperties;
+  width: string;
+  height: string;
+  style?: Omit<React.CSSProperties, "width" | "height">;
 }
 
 const Statistic = React.memo(
@@ -27,30 +29,28 @@ const Statistic = React.memo(
     info,
     style,
     number,
+    width,
+    height,
     changeProps,
     lineChartProps,
   }: Props) => {
     return (
-      <div
-        className="flex statistic-box"
-        style={{ backgroundColor: rgba(bgColor, 0.25), ...style }}
-      >
-        <div className="weekly-data">
-          <div className="icon-box">{icon}</div>
-          <p>{info}</p>
-          <p className="number">{number}</p>
-          <div className="change-box">
-            <ArrowDownLight color={colors["primary-02"]} />
-            <span className="percent" style={{ color: colors["primary-02"] }}>
-              {changeProps.percent}
-            </span>
-            <span>this week</span>
+      <AspectDiv width={width} height={height}>
+        <div
+          className="flex statistic-box"
+          style={{ backgroundColor: rgba(bgColor, 0.25), ...style }}
+        >
+          <div className="weekly-data">
+            <div className="icon-box">{icon}</div>
+            <p>{info}</p>
+            <p className="number">{number}</p>
+            <TrendTips {...changeProps} />
+          </div>
+          <div className="line-chart">
+            <TinyLineChart {...lineChartProps} />
           </div>
         </div>
-        <div className="line-chart">
-          <TinyLineChart {...lineChartProps} />
-        </div>
-      </div>
+      </AspectDiv>
     );
   }
 );

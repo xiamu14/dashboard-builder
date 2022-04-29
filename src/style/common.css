@@ -23,6 +23,30 @@ a {
   align-items: center;
 }
 
+.ant-table-thead > tr > th {
+  background: white;
+}
+
+.ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+  width: 0;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  border-radius: 50%;
+}
+
+.ant-pagination-item {
+  border-radius: 50%;
+}
+
+.ant-table-pagination {
+  justify-content: center;
+  margin-top: 20px !important;
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1600px) {
   html {
     font-size: 144px;
