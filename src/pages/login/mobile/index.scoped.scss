@@ -1,0 +1,17 @@
+.sign-in-box {
+  padding: 6.67vw 7.2vw 0;
+  margin-bottom: 24.53vw;
+  .logo {
+    width: 11.06vw;
+    height: 12.14vw;
+    background: url("../../../assets/logo_light@2x.png") center no-repeat;
+    background-size: cover;
+  }
+  .sign-in {
+    cursor: pointer;
+    .question {
+      margin-right: 6px;
+      color: var(--neutral-shades-04-75);
+    }
+  }
+}

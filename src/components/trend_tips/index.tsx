@@ -1,6 +1,5 @@
 import { colors } from "@src/constant";
-import ArrowDownLight from "maple-icons/dist/arrow_down_light";
-import ArrowUpLight from "maple-icons/dist/arrow_Up_light";
+import { ArrowDownLight, ArrowUpLight } from "maple-icons";
 import React, { memo } from "react";
 
 const TrendTips = memo((changeProps: { percent: number; upOrDown: 1 | -1 }) => {

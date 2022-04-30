@@ -1,19 +1,20 @@
+import Responsive from "@src/components/responsive";
 import config from "@src/config";
 import { colors, DashboardEntryPath } from "@src/constant";
 import userModel from "@src/model/user";
 import { getHashParams } from "@src/utils";
-import CheckCircledLight from "maple-icons/dist/check_circled_light";
-import LogoApple from "maple-icons/dist/logo_apple";
-import LogoGoogle from "maple-icons/dist/logo_google";
-import MailLight from "maple-icons/dist/mail_light";
+import { CheckCircledLight } from "maple-icons";
 import React, { useCallback, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./index.scoped.scss";
+import MobileView from "./mobile";
+import SignUp from "./sign_up";
+import { BaseProps } from "./types";
 import { createWechatLoginUrl } from "./utils";
 
 const wechatLoginUrl = createWechatLoginUrl(config.wechatLoginUrlInfo);
 
-export default function Login() {
+function Login({ onSignUp }: BaseProps) {
   const [errorText, setErrorText] = useState<String>();
   const [hideWechatLogin, setHideWechatLogin] = useState(true);
   const history = useHistory();
@@ -43,23 +44,6 @@ export default function Login() {
       }
     }
   }, [handleLogin, history]);
-
-  const handleMockLogin = () => {
-    const { data } = {
-      data: {
-        token: "xxx-xxx-xxx",
-        id: "01",
-        alias: "text",
-        isActive: true,
-        role: "Admin" as "Admin",
-      },
-    };
-    console.log("debug response", data);
-    // NOTE: 更新 api authTOken
-    userModel.userToken = data.token;
-    userModel.userInfo = data;
-    history.push(DashboardEntryPath);
-  };
 
   return (
     <div className="login-page">
@@ -106,37 +90,35 @@ export default function Login() {
             <span className="question">Already a member ?</span>
             <span>Sign in</span>
           </div>
-          <div className="sign-up flex flex-col w-full h-full">
-            <div className="content">
-              <h2 className="h-2 title">Sign Up</h2>
-              <p className="p-14 subtitle">Sign up with Open account</p>
-              <div className="methods">
-                <div className="method">
-                  <LogoGoogle width={24} height={24} />
-                  <span>Google</span>
-                </div>
-                <div className="method">
-                  <LogoApple width={24} height={24} />
-                  <span>Apple ID</span>
-                </div>
-              </div>
-              <div className="split-line" />
-              <p className="p-14 subtitle">Or continue with email address</p>
-              <div className="field-email">
-                <MailLight width={20} height={20} />
-                <input placeholder="Your email" />
-              </div>
-              <div className="btn-continue" onClick={handleMockLogin}>
-                Sign Up
-              </div>
-              <p className="tips">
-                This site is protected by reCAPTCHA and the Google Privacy
-                Policy.
-              </p>
-            </div>
-          </div>
+          <SignUp onSignUp={onSignUp} />
         </div>
       </div>
     </div>
+  );
+}
+
+export default function LoginEntry() {
+  const history = useHistory();
+  const handleMockLogin = () => {
+    const { data } = {
+      data: {
+        token: "xxx-xxx-xxx",
+        id: "01",
+        alias: "text",
+        isActive: true,
+        role: "Admin" as "Admin",
+      },
+    };
+    console.log("debug response", data);
+    // NOTE: 更新 api authTOken
+    userModel.userToken = data.token;
+    userModel.userInfo = data;
+    history.push(DashboardEntryPath);
+  };
+
+  return (
+    <Responsive mobileView={<MobileView onSignUp={handleMockLogin} />}>
+      <Login onSignUp={handleMockLogin} />
+    </Responsive>
   );
 }

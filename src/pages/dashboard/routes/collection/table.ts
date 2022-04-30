@@ -1,5 +1,5 @@
 import Table from "@src/pages/dashboard/components/table_base";
-import HomeLight from "maple-icons/dist/home_light";
+import { HomeLight } from "maple-icons";
 import { createRoutes } from "../utils";
 
 const power = "table";

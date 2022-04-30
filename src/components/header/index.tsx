@@ -1,10 +1,13 @@
 import { Avatar, Badge, Space } from "antd";
-import AddLight from "maple-icons/dist/add_light";
-import MessageLight from "maple-icons/dist/message_light";
-import NotificationLight from "maple-icons/dist/notification_light";
-import SearchLight from "maple-icons/dist/search_light";
+import {
+  AddLight,
+  MessageLight,
+  NotificationLight,
+  SearchLight,
+} from "maple-icons";
 import React from "react";
 import "./index.coped.scss";
+
 const Header = () => {
   return (
     <div className="header flex justify-between items-center">
