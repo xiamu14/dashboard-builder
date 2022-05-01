@@ -1,6 +1,7 @@
 import Button from "@src/components/button";
 import IconPlate from "@src/components/icon_plate";
 import { colors } from "@src/constant";
+import { randomColor } from "@src/utils/random_color";
 import { Avatar } from "antd";
 import { DirectionRight } from "maple-icons";
 import React, { memo } from "react";
@@ -27,6 +28,9 @@ export const TabPane = memo(() => {
             >
               <Avatar
                 size={64}
+                style={{
+                  backgroundColor: randomColor("secondary-0", 5),
+                }}
                 src={`https://joeschmoe.io/api/v1/random?t=${index}`}
               />
               <span className="mt-[6px]">{item}</span>

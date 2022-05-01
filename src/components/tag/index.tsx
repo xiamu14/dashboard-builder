@@ -5,15 +5,17 @@ interface Props {
   color?: string;
 }
 
-const Tag = React.memo((props: React.PropsWithChildren<Props>) => {
-  return (
-    <div
-      className="tag"
-      style={{ backgroundColor: props.color ?? colors["neutral-03"] }}
-    >
-      {props.children}
-    </div>
-  );
-});
+const Tag = React.memo(
+  ({ color, children }: React.PropsWithChildren<Props>) => {
+    return (
+      <div
+        className="tag"
+        style={{ backgroundColor: color ?? colors["neutral-03"] }}
+      >
+        {children}
+      </div>
+    );
+  }
+);
 
 export default Tag;

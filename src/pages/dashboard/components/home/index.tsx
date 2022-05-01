@@ -4,13 +4,20 @@ import IconPlate from "@src/components/icon_plate";
 import Tab from "@src/components/tab";
 import Tag from "@src/components/tag";
 import { colors } from "@src/constant";
+import { randomColor } from "@src/utils/random_color";
+import { Avatar } from "antd";
 import {
   ActivityLight,
+  DesignLight,
+  DirectionRight,
   FacebookLight,
   LogoInstagram,
+  MultiselectLight,
+  PhoneLight,
   ScheduleLight,
   ShoppingBagLight,
   TwitterLight,
+  VideoRecorderLight,
 } from "maple-icons";
 import React from "react";
 import ProductViewsBarChart from "./components/product_views_bar_chart";
@@ -19,6 +26,67 @@ import { TabPane } from "./components/tab_pane";
 import "./index.scoped.scss";
 
 export default function Home() {
+  const tips = [
+    {
+      icon: (
+        <ScheduleLight color={colors["neutral-06"]} width={20} height={20} />
+      ),
+      text: "Early access",
+      tag: {
+        text: "New",
+        color: colors["secondary-01"],
+      },
+      duration: "3 mins read",
+    },
+    {
+      icon: (
+        <DirectionRight color={colors["neutral-06"]} width={20} height={20} />
+      ),
+      text: "Asset use guidelines",
+      tag: {
+        text: "New",
+        color: colors["secondary-04"],
+      },
+      duration: "2 mins read",
+    },
+    {
+      icon: <DesignLight color={colors["neutral-06"]} width={20} height={20} />,
+      text: "Exclusive downloads",
+      duration: "2 mins read",
+    },
+    {
+      icon: (
+        <VideoRecorderLight
+          color={colors["neutral-06"]}
+          width={20}
+          height={20}
+        />
+      ),
+      text: "Behind the scenes",
+      tag: {
+        text: "New",
+        color: colors["secondary-01"],
+      },
+      duration: "3 mins read",
+    },
+    {
+      icon: <PhoneLight color={colors["neutral-06"]} width={20} height={20} />,
+      text: "Asset use guidelines",
+      tag: {
+        text: "New",
+        color: colors["secondary-04"],
+      },
+      duration: "5 mins read",
+    },
+    {
+      icon: (
+        <MultiselectLight color={colors["neutral-06"]} width={20} height={20} />
+      ),
+      text: "Life & work updates",
+
+      duration: "3 mins read",
+    },
+  ];
   return (
     <ContentBox title="Dashboard">
       <div className="h-full max-h-full overflow-y-scroll">
@@ -86,25 +154,50 @@ export default function Home() {
                   <ProductViewsBarChart />
                 </div>
               </div>
-              <div className="item atom-desktop-block">
+              <div className="item atom-desktop-block pro-tips-box">
                 <BlockHeader
                   bgColor={colors["secondary-04"]}
                   title="Pro tips"
                 />
                 <div className="content-box">
-                  <p>Need some ideas for the next product?</p>
-                  <div className="grid">
-                    <div className="flex justify-start items-center">
-                      <IconPlate>
-                        <ScheduleLight />
-                      </IconPlate>
-                      <div>
-                        <p>Early access</p>
-                        <div>
-                          <Tag>New</Tag>
+                  <p className="desc">Need some ideas for the next product?</p>
+                  <div className="grid tips">
+                    {tips.map((item, index) => {
+                      return (
+                        <div
+                          key={index}
+                          className="flex justify-start items-center"
+                        >
+                          <IconPlate className="icon" circle>
+                            {item.icon}
+                          </IconPlate>
+                          <div>
+                            <p className="subtitle">{item.text}</p>
+                            <div className="flex justify-start items-center">
+                              {item.tag && (
+                                <Tag color={item.tag.color}>
+                                  {item.tag.text}
+                                </Tag>
+                              )}
+                              {item.tag && <div className="tag-space" />}
+                              <div className="duration-box flex justify-start items-center">
+                                <Avatar
+                                  size={20}
+                                  style={{
+                                    backgroundColor: randomColor(
+                                      "secondary-0",
+                                      5
+                                    ),
+                                  }}
+                                  src={`https://joeschmoe.io/api/v1/random?t=${index}`}
+                                />
+                                <span className="text">{item.duration}</span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -128,7 +221,6 @@ export default function Home() {
                     <div className="method flex justify-center items-center">
                       <TwitterLight width={24} height={24} />
                       <div className="w-14px" />
-
                       <span>Twitter</span>
                     </div>
                     <div className="method flex justify-center items-center">

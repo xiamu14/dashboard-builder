@@ -35,4 +35,45 @@
       cursor: pointer;
     }
   }
+  .pro-tips-box {
+    .tips {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-row-gap: 32px;
+    }
+    .desc {
+      margin-bottom: 16px;
+      font-size: 15px;
+      color: var(--neutral-04);
+      line-height: 1.4;
+    }
+    ::v-deep .icon {
+      width: 64px;
+      height: 64px;
+      margin-right: 12px;
+      background-color: var(--neutral-01);
+      border: 2px solid var(--neutral-03);
+    }
+    .subtitle {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: var(--neutral-07);
+    }
+    .tag-space {
+      width: 4px;
+      height: 1px;
+      opacity: 0;
+    }
+    .duration-box {
+      width: fit-content;
+      padding: 0 8px 0 2px;
+      height: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--neutral-03);
+      .text {
+        margin-left: 4px;
+        color: var(--neutral-04);
+      }
+    }
+  }
 }

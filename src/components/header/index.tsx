@@ -1,3 +1,4 @@
+import { randomColor } from "@src/utils/random_color";
 import { Avatar, Badge, Space } from "antd";
 import {
   AddLight,
@@ -26,7 +27,13 @@ const Header = () => {
         <Badge dot>
           <NotificationLight width={20} height={20} />
         </Badge>
-        <Avatar size={42} src="https://joeschmoe.io/api/v1/random" />
+        <Avatar
+          style={{
+            backgroundColor: randomColor("secondary-0", 5),
+          }}
+          size={42}
+          src="https://joeschmoe.io/api/v1/random"
+        />
       </Space>
     </div>
   );
