@@ -1,13 +1,13 @@
-import Table from "@src/pages/dashboard/components/table_base";
+import Home from "@src/pages/dashboard/components/home";
 import { HomeLight } from "maple-icons";
 import { createRoutes } from "../utils";
 
-const power = "table";
+const power = "home";
 
-const routes = createRoutes<"home">(power, {
-  home: {
-    path: "/home",
-    component: Table,
+const routes = createRoutes<"root">(power, {
+  root: {
+    path: "",
+    component: Home,
   },
 });
 
@@ -15,7 +15,7 @@ const menus = {
   title: "home",
   icon: HomeLight,
   power,
-  path: routes.home.path,
+  path: routes.root.path,
 };
 
 export default { routes: Object.values(routes), menus, metaRoutes: routes };

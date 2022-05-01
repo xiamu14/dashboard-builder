@@ -1,0 +1,44 @@
+.tab-box {
+  .tab-header {
+    position: relative;
+    width: 624px;
+    height: 124px;
+    border-radius: 12px;
+    background: var(--neutral-02);
+    padding: 8px;
+    .tab-header-wrapper {
+      position: relative;
+      z-index: 2;
+      .tab-header-item {
+        width: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+  .glider {
+    position: absolute;
+    background-color: var(--neutral-01);
+    z-index: 1;
+    border-radius: 8px; // just a high number to create pill effect
+    transition: 0.25s ease-out;
+    width: 304px;
+    height: 108px;
+    top: 8px;
+    left: 8px;
+    box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.25),
+      inset 0px 2px 0px 0px rgba(255, 255, 255, 0.25),
+      inset 0px -1px 1px 0px rgba(0, 0, 0, 0.04),
+      0px 4px 8px -4px rgba(0, 0, 0, 0.25),
+      inset 0px 2px 0px 0px rgba(255, 255, 255, 0.25),
+      inset 0px -1px 1px 0px rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+  }
+  .tab-pane {
+    position: relative;
+    > div {
+      width: 100%;
+      height: fit-content;
+      padding: 32px 0 50px;
+    }
+  }
+}

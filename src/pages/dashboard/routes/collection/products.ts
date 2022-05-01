@@ -1,4 +1,4 @@
-import Table from "@src/pages/dashboard/components/table_base";
+import ProductsDashboard from "@src/pages/dashboard/components/products_dashboard";
 import { DiamondLight } from "maple-icons";
 import { createRoutes } from "../utils";
 
@@ -7,7 +7,7 @@ const power = "products";
 const routes = createRoutes<"dashboard">(power, {
   dashboard: {
     path: "/dashboard",
-    component: Table,
+    component: ProductsDashboard,
   },
 });
 

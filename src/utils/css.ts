@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 function componentToHex(c: number) {
   let hex = c.toString(16);
   return hex.length === 1 ? "0" + hex : hex;
@@ -26,4 +28,32 @@ export function rgba(hex: string, opacity: number) {
   } else {
     throw new Error("invalid hex string");
   }
+}
+
+function toCamel(str: string) {
+  return str.replace(/^-/, "").replace(/-(\w)(\w+)/g, (_, b, c) => {
+    return b.toUpperCase() + c.toLowerCase();
+  });
+}
+
+export function cssTemplate(
+  staticContent: TemplateStringsArray,
+  ...dynamic: string[]
+) {
+  let res = "";
+  for (let i = 0; i < staticContent.length; i += 1) {
+    res += `${staticContent[i]}${
+      i < staticContent.length - 1 ? dynamic[i] : ""
+    }`;
+  }
+  const tmp = res.trim();
+  const tmpArr = tmp.split(";");
+  const result: Record<string, any> = {};
+  tmpArr.forEach((item) => {
+    if (item) {
+      const arr = item.split(":");
+      result[toCamel(arr[0]).trim()] = arr[1].trim();
+    }
+  });
+  return result as CSSProperties;
 }

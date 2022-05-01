@@ -51,7 +51,13 @@ a {
   margin-top: 20px !important;
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 37.5px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1200px) {
   html {
     font-size: 120px;
   }

@@ -2,7 +2,7 @@ import { routeMap } from "@src/pages/dashboard/routes";
 
 export const EmptyObject = {};
 
-export const DashboardEntryPath = routeMap.table.home.path;
+export const DashboardEntryPath = routeMap.home.root.path;
 
 export const LoginPath = "/login";
 

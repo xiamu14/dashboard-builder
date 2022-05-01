@@ -1,0 +1,48 @@
+@media screen and (max-width: 500px) {
+  .sign-up {
+    .content {
+      width: 296px;
+      .title {
+        margin-bottom: 32px;
+        font-size: 48px;
+      }
+      .subtitle {
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+      .methods {
+        margin-bottom: 32px;
+        .method {
+          width: 46%;
+          height: 46px;
+          border-radius: 12px;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+      .split-line {
+        height: 2px;
+        margin-bottom: 32px;
+      }
+      .field-email {
+        padding: 8px 14px;
+        height: 48px;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        input {
+          margin-left: 8px;
+          font-size: 14px;
+        }
+      }
+      .btn-continue {
+        height: 48px;
+        border-radius: 12px;
+        margin-bottom: 32px;
+      }
+      .tips {
+        font-size: 14px;
+      }
+    }
+  }
+}

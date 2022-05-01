@@ -1,6 +1,8 @@
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import antdDayjs from "antd-dayjs-vite-plugin";
 import dotenv from "dotenv";
+import fs from "fs";
+import lessToJS from "less-vars-to-js";
 import path from "path";
 import reactScopedCssPlugin from "rollup-plugin-react-scoped-css";
 import { defineConfig } from "vite";
@@ -30,6 +32,14 @@ function importAntdStyle(name: string) {
   }
   return `antd/lib/${name}/style/index.less`;
 }
+
+// 获取主题变量
+const themeVariables = lessToJS(
+  fs.readFileSync(
+    path.resolve(__dirname, "./src/style/antd_theme_variable.less"),
+    "utf8"
+  )
+);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -69,7 +79,7 @@ export default defineConfig({
         // 支持内联 JavaScript
         javascriptEnabled: true,
         // 重写 less 变量，定制样式
-        // modifyVars: themeVariables,
+        modifyVars: themeVariables,
       },
     },
   },

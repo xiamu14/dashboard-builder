@@ -1,12 +1,14 @@
 module.exports = {
   plugins: {
     "postcss-pxtorem": {
-      rootValue: 144,
+      rootValue: (input) => {
+        return input.file.indexOf("-mobile.") > -1 ? 37.5 : 144;
+      },
       unitPrecision: 3,
       propList: ["*"],
       selectorBlackList: ["html", "line-height", "letter-spacing"],
       exclude: /(node_modules)/,
-      minPixelValue: 12,
+      minPixelValue: 2,
     },
   },
 };

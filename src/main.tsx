@@ -6,9 +6,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "virtual:windi.css";
 import App from "./app";
+import "./style/atomic.scss";
 import "./style/color_variable.css";
 import "./style/common.css";
-import "./style/shared.scss";
 
 ReactDOM.render(
   <React.StrictMode>

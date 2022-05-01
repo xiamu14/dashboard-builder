@@ -6,7 +6,7 @@ export function createRoutes<K extends string>(
 ): Routes<keyof typeof routes> {
   Object.keys(routes).forEach((key) => {
     const route = routes[key as K];
-    route.path = `/dashboard/${power}${route.path}`;
+    route.path = `/-/${power}${route.path}`;
     route.power = power;
     if (route.menu) {
       route.menu = {

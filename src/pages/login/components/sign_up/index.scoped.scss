@@ -1,0 +1,86 @@
+@media screen and (min-width: 500px) {
+  .sign-up {
+    .content {
+      width: 30vw;
+      max-width: 360px;
+      .title {
+        margin-bottom: 32px;
+        font-size: 48px;
+      }
+      .subtitle {
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+      .methods {
+        margin-bottom: 32px;
+        .method {
+          height: 48px;
+          border-radius: 12px;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+      .split-line {
+        height: 2px;
+        margin-bottom: 32px;
+      }
+      .field-email {
+        padding: 8px 14px;
+        height: 48px;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        input {
+          margin-left: 8px;
+          font-size: 14px;
+        }
+      }
+      .btn-continue {
+        height: 48px;
+        border-radius: 12px;
+        margin-bottom: 32px;
+      }
+      .tips {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.sign-up {
+  .title {
+    color: var(--neutral-07);
+  }
+  .method {
+    width: 48%;
+    border: 2px solid var(--neutral-03);
+  }
+  .split-line {
+    background: var(--neutral-03);
+  }
+  .field-email {
+    width: 100%;
+    background: var(--neutral-02);
+    input {
+      background: var(--neutral-02);
+      flex: 1;
+      caret-color: var(--primary-01);
+      &:focus {
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .btn-continue {
+    width: 100%;
+    background-color: var(--primary-01);
+    color: white;
+    &.disabled {
+      background: rgba(42, 133, 255, 0.5);
+      color: var(--neutral-01);
+    }
+  }
+  .tips {
+    color: var(--neutral-shades-04-75);
+  }
+}

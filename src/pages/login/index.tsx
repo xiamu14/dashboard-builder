@@ -6,9 +6,9 @@ import { getHashParams } from "@src/utils";
 import { CheckCircledLight } from "maple-icons";
 import React, { useCallback, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import SignUp from "./components/sign_up";
 import "./index.scoped.scss";
 import MobileView from "./mobile";
-import SignUp from "./sign_up";
 import { BaseProps } from "./types";
 import { createWechatLoginUrl } from "./utils";
 
@@ -60,7 +60,7 @@ function Login({ onSignUp }: BaseProps) {
         </div>
       )}
       <div className="w-full h-full flex">
-        <div className="side-info w-[28%] bg-neutral-02 flex-center">
+        <div className="side-info w-[28%] bg-neutral-02 flex justify-center items-center">
           <div className="logo" />
           <div className="content">
             <div className="illustration" />
@@ -109,7 +109,7 @@ export default function LoginEntry() {
         role: "Admin" as "Admin",
       },
     };
-    console.log("debug response", data);
+    // console.log("debug response", data);
     // NOTE: 更新 api authTOken
     userModel.userToken = data.token;
     userModel.userInfo = data;

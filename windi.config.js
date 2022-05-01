@@ -1,6 +1,6 @@
 import typography from "windicss/plugin/typography";
-import mixin from "./plugin/windi.mixin";
 import colorVariables from "./src/constant/color_variables";
+import mixin from "./src/plugin/windi.mixin";
 export default {
   extract: {
     include: ["src/**/*.tsx"],
