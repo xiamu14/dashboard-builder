@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="46px" viewBox="0 0 42 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Logo</title>
+    <defs>
+        <path d="M16.78461,1.07179502 C19.25981,-0.357265006 22.30941,-0.357265006 24.78461,1.07179502 L37.56921,8.45299514 C40.04441,9.88209516 41.56921,12.5230952 41.56921,15.3811953 L41.56921,30.1435955 C41.56921,33.0016955 40.04441,35.6426956 37.56921,37.0717956 L24.78461,44.4529957 C22.30941,45.8820958 19.25981,45.8820958 16.78461,44.4529957 L4,37.0717956 C1.52479,35.6426956 0,33.0016955 0,30.1435955 L0,15.3811953 C0,12.5230952 1.52479,9.88209516 4,8.45299514 L16.78461,1.07179502 Z" id="path-1"></path>
+        <filter x="-3.6%" y="-3.3%" width="107.2%" height="106.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.529999971 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.839215686   0 0 0 0 0.839215686   0 0 0 0 0.839215686  0 0 0 0.25 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="50%" y1="-3.06161713e-15%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#D0D0D0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="📐Home---Sign-In---Sign-Up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-(Customer-tab)/Desktop/Light" transform="translate(-27.000000, -25.000000)" fill-rule="nonzero">
+            <g id="Top-elements" transform="translate(24.000000, 25.237604)">
+                <g id="Logo" transform="translate(3.215390, 0.000000)">
+                    <g id="Polygon-1">
+                        <use fill="#272B30" xlink:href="#path-1"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    </g>
+                    <rect id="Rectangle-3" fill="#FFFFFF" x="18.78461" y="16.7623957" width="4" height="12" rx="2"></rect>
+                    <rect id="Rectangle-4" fill="url(#linearGradient-3)" x="10.78461" y="18.7623957" width="4" height="8" rx="2"></rect>
+                    <rect id="Rectangle-5" fill="url(#linearGradient-3)" x="26.78461" y="18.7623957" width="4" height="8" rx="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

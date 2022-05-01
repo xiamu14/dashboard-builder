@@ -14,8 +14,6 @@ const MenuPro = React.memo(() => {
     const pathArr = pathnameRef.current.split("/");
     if (pathArr[pathArr.length - 2] && pathArr[pathArr.length - 2] !== "-") {
       setOpenKeys([pathArr[pathArr.length - 2]]);
-    } else {
-      setOpenKeys(["novel"]);
     }
   }, []);
 
