@@ -127,9 +127,10 @@ export default function ProductsDashboard() {
                 lineChartProps={{ stroke: colors["primary-02"] }}
                 info="Earing"
                 number="128"
-                changeProps={{
-                  upOrDown: 1,
+                trendTipsProps={{
+                  isRise: false,
                   percent: 34.5,
+                  desc: "this week",
                 }}
               />
               <Statistic
@@ -146,9 +147,10 @@ export default function ProductsDashboard() {
                 lineChartProps={{ stroke: colors["primary-01"] }}
                 info="Customer"
                 number="128"
-                changeProps={{
-                  upOrDown: 1,
+                trendTipsProps={{
+                  isRise: true,
                   percent: 34.5,
+                  desc: "this week",
                 }}
               />
               <Statistic
@@ -165,9 +167,10 @@ export default function ProductsDashboard() {
                 lineChartProps={{ stroke: colors["primary-04"] }}
                 info="Payouts"
                 number="128"
-                changeProps={{
-                  upOrDown: 1,
+                trendTipsProps={{
+                  isRise: true,
                   percent: 34.5,
+                  desc: "this week",
                 }}
               />
             </div>

@@ -24,19 +24,5 @@
       color: var(--neutral-07);
       margin: 2px 0 6px;
     }
-    .change-box {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: auto;
-      height: 24px;
-      padding: 4px 8px;
-      background: #fcfcfc;
-      border-radius: 4px;
-
-      .percent {
-        margin: 0 4px;
-      }
-    }
   }
 }

@@ -1,10 +1,21 @@
 import BlockHeader from "@src/components/block_header";
 import ContentBox from "@src/components/content_box";
+import IconPlate from "@src/components/icon_plate";
 import Tab from "@src/components/tab";
+import Tag from "@src/components/tag";
 import { colors } from "@src/constant";
-import { FacebookLight, LogoInstagram, TwitterLight } from "maple-icons";
+import {
+  ActivityLight,
+  FacebookLight,
+  LogoInstagram,
+  ScheduleLight,
+  ShoppingBagLight,
+  TwitterLight,
+} from "maple-icons";
 import React from "react";
 import ProductViewsBarChart from "./components/product_views_bar_chart";
+import TabHeader from "./components/tab_header";
+import { TabPane } from "./components/tab_pane";
 import "./index.scoped.scss";
 
 export default function Home() {
@@ -23,12 +34,44 @@ export default function Home() {
                   <Tab
                     tabs={[
                       {
-                        header: "test1",
-                        pane: "test1",
+                        header: (
+                          <TabHeader
+                            index={0}
+                            desc="Customer"
+                            number="1223"
+                            isRise={false}
+                            percent={35.8}
+                            icon={
+                              <ShoppingBagLight
+                                width={20}
+                                height={20}
+                                color={colors["neutral-07"]}
+                              />
+                            }
+                            iconPlateBg={colors["secondary-03"]}
+                          />
+                        ),
+                        pane: <TabPane />,
                       },
                       {
-                        header: "test2",
-                        pane: "test2",
+                        header: (
+                          <TabHeader
+                            index={1}
+                            desc="Viewer"
+                            number="31K"
+                            isRise
+                            percent={12.8}
+                            icon={
+                              <ActivityLight
+                                width={20}
+                                height={20}
+                                color={colors["neutral-07"]}
+                              />
+                            }
+                            iconPlateBg={colors["secondary-02"]}
+                          />
+                        ),
+                        pane: <TabPane />,
                       },
                     ]}
                   />
@@ -48,6 +91,22 @@ export default function Home() {
                   bgColor={colors["secondary-04"]}
                   title="Pro tips"
                 />
+                <div className="content-box">
+                  <p>Need some ideas for the next product?</p>
+                  <div className="grid">
+                    <div className="flex justify-start items-center">
+                      <IconPlate>
+                        <ScheduleLight />
+                      </IconPlate>
+                      <div>
+                        <p>Early access</p>
+                        <div>
+                          <Tag>New</Tag>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="item atom-desktop-block link-box">
                 <BlockHeader

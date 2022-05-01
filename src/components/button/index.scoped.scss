@@ -1,0 +1,16 @@
+.button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  height: 48px;
+  width: fit-content;
+  padding: 0 20px;
+  font-size: 15px;
+  cursor: pointer;
+  &.plain {
+    background: var(--neutral-01);
+    border: 2px solid var(--neutral-03);
+    font-size: var(--neutral-07);
+  }
+}

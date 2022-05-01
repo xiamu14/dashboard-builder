@@ -1,10 +1,11 @@
+import { TabContext } from "@src/components/tab/context";
 import { motion } from "framer-motion";
 import React, { memo, ReactNode, useCallback, useMemo, useState } from "react";
 import "./index.scoped.scss";
 
 interface Props {
   tabs: { header: ReactNode; pane: ReactNode }[];
-  activeIndex?: number;
+  defaultActiveIndex?: number;
 }
 
 const contentVariant = {
@@ -24,58 +25,64 @@ const contentVariant = {
   },
 };
 
-const Tab = memo(({ tabs, activeIndex = 0 }: Props) => {
-  const [checkedIndex, setCheckedIndex] = useState(activeIndex);
+const Tab = memo(({ tabs, defaultActiveIndex = 0 }: Props) => {
+  const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
   const gliderMoveCss = useMemo(() => {
-    return `translateX(${checkedIndex * 100}%)`;
-  }, [checkedIndex]);
+    return `translateX(${activeIndex * 100}%)`;
+  }, [activeIndex]);
 
   const handleCheck = useCallback((index: number) => {
-    setCheckedIndex(index);
+    setActiveIndex(index);
   }, []);
 
+  const contextValue = useMemo(() => {
+    return { activeIndex };
+  }, [activeIndex]);
+
   return (
-    <div className="tab-box">
-      <div className="tab-header">
-        <div className="tab-header-wrapper flex w-full h-full">
+    <TabContext.Provider value={contextValue}>
+      <div className="tab-box">
+        <div className="tab-header">
+          <div className="tab-header-wrapper flex w-full h-full">
+            {tabs.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="tab-header-item h-full flex justify-center items-center"
+                  onClick={() => handleCheck(index)}
+                >
+                  {item.header}
+                </div>
+              );
+            })}
+          </div>
+          <span className="glider" style={{ transform: gliderMoveCss }} />
+        </div>
+        <div className="tab-pane w-full flex">
           {tabs.map((item, index) => {
             return (
-              <div
+              <motion.div
                 key={index}
-                className="tab-header-item h-full flex justify-center items-center"
-                onClick={() => handleCheck(index)}
+                role="tabpanel"
+                variants={{
+                  show: {
+                    display: "block",
+                    transition: {
+                      staggerChildren: 0.2,
+                    },
+                  },
+                  hide: { display: "none" },
+                }}
+                animate={index === activeIndex ? "show" : "hide"}
+                initial="hide"
               >
-                {item.header}
-              </div>
+                <motion.div variants={contentVariant}>{item.pane}</motion.div>
+              </motion.div>
             );
           })}
         </div>
-        <span className="glider" style={{ transform: gliderMoveCss }} />
       </div>
-      <div className="tab-pane w-full flex">
-        {tabs.map((item, index) => {
-          return (
-            <motion.div
-              key={index}
-              role="tabpanel"
-              variants={{
-                show: {
-                  display: "block",
-                  transition: {
-                    staggerChildren: 0.2,
-                  },
-                },
-                hide: { display: "none" },
-              }}
-              animate={index === checkedIndex ? "show" : "hide"}
-              initial="hide"
-            >
-              <motion.div variants={contentVariant}>{item.pane}</motion.div>
-            </motion.div>
-          );
-        })}
-      </div>
-    </div>
+    </TabContext.Provider>
   );
 });
 

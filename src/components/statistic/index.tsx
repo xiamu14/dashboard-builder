@@ -1,5 +1,6 @@
 import AspectDiv from "@src/components/aspect_div";
 import TrendTips from "@src/components/trend_tips";
+import { colors } from "@src/constant";
 import { rgba } from "@src/utils/css";
 import React from "react";
 import "./index.scoped.scss";
@@ -10,9 +11,10 @@ interface Props {
   icon: React.ReactNode;
   info: string;
   number: string;
-  changeProps: {
+  trendTipsProps: {
     percent: number;
-    upOrDown: 1 | -1;
+    isRise: boolean;
+    desc?: string;
   };
   lineChartProps: {
     stroke: string;
@@ -31,7 +33,7 @@ const Statistic = React.memo(
     number,
     width,
     height,
-    changeProps,
+    trendTipsProps,
     lineChartProps,
   }: Props) => {
     return (
@@ -44,7 +46,10 @@ const Statistic = React.memo(
             <div className="icon-box">{icon}</div>
             <p>{info}</p>
             <p className="number">{number}</p>
-            <TrendTips {...changeProps} />
+            <TrendTips
+              {...trendTipsProps}
+              style={{ backgroundColor: colors["neutral-01"] }}
+            />
           </div>
           <div className="line-chart">
             <TinyLineChart {...lineChartProps} />

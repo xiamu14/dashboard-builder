@@ -1,0 +1,11 @@
+.tab-pane-box {
+  .desc-box {
+    margin-bottom: 56px;
+    .desc-text {
+      color: var(--neutral-04);
+    }
+  }
+  ::v-deep .btn-view-all {
+    background-color: var(--neutral-03);
+  }
+}
