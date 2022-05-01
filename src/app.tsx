@@ -3,7 +3,7 @@ import Home from "@src/pages/home";
 import Login from "@src/pages/login";
 import sessionUtil from "@src/utils/storage/session";
 import React, { useEffect } from "react";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
 function App() {
