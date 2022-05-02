@@ -46,74 +46,176 @@ export default function Shop() {
           <div>
             <div className="product-list w-full flex flex-col justify-center items-center">
               <div className="col-item flex w-full justify-between items-center">
-                <AspectDiv width="32%" height="80%">
-                  <div className="item">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" />
-                    <div className="product-info flex justify-between items-start">
-                      <div className="flex flex-col">
-                        <p className="title">
-                          Fleet - Travel shopping UI design kit
-                        </p>
-                        <div className="flex justify-start items-center">
-                          <StarFilled
-                            color={colors["primary-05"]}
-                            width={19}
-                            height={18}
-                          />
-                          <p className="star-count">
-                            4.8 <span className="gray">(87)</span>
-                          </p>
-                        </div>
-                      </div>
-                      <div>
-                        <Tag color={randomColor("secondary-0", 5)}>$64</Tag>
-                      </div>
-                    </div>
-                  </div>
-                </AspectDiv>
-                <AspectDiv width="32%" height="80%">
-                  <div className="item" />
-                </AspectDiv>
-                <AspectDiv width="32%" height="80%">
-                  <div className="item" />
-                </AspectDiv>
-              </div>
-              <div className="col-item flex w-full justify-between items-center">
-                <AspectDiv width="32%" height="80%">
-                  <div className="item">
+                <div className="item">
+                  <AspectDiv width="100%" height="65%">
                     <img
                       className="product-picture"
                       src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                     />
-                    <div className="product-info flex justify-between items-start">
-                      <div className="flex flex-col">
-                        <p className="title">
-                          Fleet - Travel shopping UI design kit
+                  </AspectDiv>
+                  <div className="product-info flex justify-between items-start">
+                    <div className="flex flex-col">
+                      <p className="title">
+                        Fleet - Travel shopping UI design kit
+                      </p>
+                      <div className="flex justify-start items-center">
+                        <StarFilled
+                          color={colors["primary-05"]}
+                          width={19}
+                          height={18}
+                        />
+                        <p className="star-count">
+                          4.8 <span className="gray">(87)</span>
                         </p>
-                        <div className="flex justify-start items-center">
-                          <StarFilled
-                            color={colors["primary-05"]}
-                            width={19}
-                            height={18}
-                          />
-                          <p className="star-count">
-                            4.8 <span className="gray">(87)</span>
-                          </p>
-                        </div>
                       </div>
-                      <Space direction="vertical" className="items-end">
-                        <Tag color={randomColor("secondary-0", 5)}>$64</Tag>
-                        <Tag className="delete">$164</Tag>
-                      </Space>
+                    </div>
+                    <div>
+                      <Tag color={randomColor("secondary-0", 5)}>$64</Tag>
                     </div>
                   </div>
-                </AspectDiv>
-                <AspectDiv width="32%" height="90%">
-                  <div className="item w-full h-full" />
-                </AspectDiv>
-                <AspectDiv width="32%" height="80%">
-                  <div className="item" />
-                </AspectDiv>
+                </div>
+                <div className="item">
+                  <AspectDiv width="100%" height="65%">
+                    <img
+                      className="product-picture"
+                      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                    />
+                  </AspectDiv>
+                  <div className="product-info flex justify-between items-start">
+                    <div className="flex flex-col">
+                      <p className="title">
+                        Fleet - Travel shopping UI design kit
+                      </p>
+                      <div className="flex justify-start items-center">
+                        <StarFilled
+                          color={colors["primary-05"]}
+                          width={19}
+                          height={18}
+                        />
+                        <p className="star-count">
+                          4.8 <span className="gray">(87)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <Tag color={randomColor("secondary-0", 5)}>$64</Tag>
+                    </div>
+                  </div>
+                </div>
+                <div className="item">
+                  <AspectDiv width="100%" height="65%">
+                    <img
+                      className="product-picture"
+                      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                    />
+                  </AspectDiv>
+                  <div className="product-info flex justify-between items-start">
+                    <div className="flex flex-col">
+                      <p className="title">
+                        Fleet - Travel shopping UI design kit
+                      </p>
+                      <div className="flex justify-start items-center">
+                        <StarFilled
+                          color={colors["primary-05"]}
+                          width={19}
+                          height={18}
+                        />
+                        <p className="star-count">
+                          4.8 <span className="gray">(87)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <Tag color={randomColor("secondary-0", 5)}>$64</Tag>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-item flex w-full justify-between items-center">
+                <div className="item">
+                  <AspectDiv width="100%" height="65%">
+                    <img
+                      className="product-picture"
+                      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                    />
+                  </AspectDiv>
+                  <div className="product-info flex justify-between items-start">
+                    <div className="flex flex-col">
+                      <p className="title">
+                        Fleet - Travel shopping UI design kit
+                      </p>
+                      <div className="flex justify-start items-center">
+                        <StarFilled
+                          color={colors["primary-05"]}
+                          width={19}
+                          height={18}
+                        />
+                        <p className="star-count">
+                          4.8 <span className="gray">(87)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <Tag color={randomColor("secondary-0", 5)}>$64</Tag>
+                    </div>
+                  </div>
+                </div>
+                <div className="item">
+                  <AspectDiv width="100%" height="65%">
+                    <img
+                      className="product-picture"
+                      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                    />
+                  </AspectDiv>
+                  <div className="product-info flex justify-between items-start">
+                    <div className="flex flex-col">
+                      <p className="title">
+                        Fleet - Travel shopping UI design kit
+                      </p>
+                      <div className="flex justify-start items-center">
+                        <StarFilled
+                          color={colors["primary-05"]}
+                          width={19}
+                          height={18}
+                        />
+                        <p className="star-count">
+                          4.8 <span className="gray">(87)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <Tag color={randomColor("secondary-0", 5)}>$64</Tag>
+                    </div>
+                  </div>
+                </div>
+                <div className="item">
+                  <AspectDiv width="100%" height="65%">
+                    <img
+                      className="product-picture"
+                      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                    />
+                  </AspectDiv>
+                  <div className="product-info flex justify-between items-start">
+                    <div className="flex flex-col">
+                      <p className="title">
+                        Fleet - Travel shopping UI design kit
+                      </p>
+                      <div className="flex justify-start items-center">
+                        <StarFilled
+                          color={colors["primary-05"]}
+                          width={19}
+                          height={18}
+                        />
+                        <p className="star-count">
+                          4.8 <span className="gray">(87)</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div>
+                      <Tag color={randomColor("secondary-0", 5)}>$64</Tag>
+                    </div>
+                  </div>
+                </div>
               </div>
               <Button plain>Load more</Button>
             </div>
