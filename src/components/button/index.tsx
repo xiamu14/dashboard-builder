@@ -1,13 +1,20 @@
 import React, { memo } from "react";
 import "./index.scoped.scss";
 interface Props {
+  className?: string;
   plain?: boolean;
 }
 
 const Button = memo(
-  ({ children, plain = false }: React.PropsWithChildren<Props>) => {
+  ({
+    children,
+    plain = false,
+    className = "",
+  }: React.PropsWithChildren<Props>) => {
     return (
-      <div className={`button-box ${plain ? "plain" : "fill"}`}>{children}</div>
+      <div className={`button-box ${plain ? "plain" : "fill"} ${className}`}>
+        {children}
+      </div>
     );
   }
 );

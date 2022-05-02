@@ -24,7 +24,8 @@ export type Routes<T extends string> = Record<T, RouteType>;
 export interface MenuType {
   title: string;
   power: string;
-  icon?: React.FC;
+  icon?: React.FC<{ width: number; height: number; color?: string }>;
+  selectedIcon?: React.FC<{ width: number; height: number; color?: string }>;
   path?: string;
   target?: TargetType;
   children?: MenuItemType[];

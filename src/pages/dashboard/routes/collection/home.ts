@@ -12,7 +12,7 @@ const routes = createRoutes<"root">(power, {
 });
 
 const menus = {
-  title: "home",
+  title: "Home",
   icon: HomeLight,
   power,
   path: routes.root.path,

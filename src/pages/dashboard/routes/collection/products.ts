@@ -12,12 +12,12 @@ const routes = createRoutes<"dashboard">(power, {
 });
 
 const menus = {
-  title: "products",
+  title: "Products",
   icon: DiamondLight,
   power,
   children: [
     {
-      title: "dashboard",
+      title: "Dashboard",
       path: routes.dashboard.path,
     },
   ],

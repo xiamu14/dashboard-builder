@@ -33,8 +33,8 @@ const MenuPro = React.memo(() => {
                 style={{ fontWeight: 600, fontSize: "14px" }}
               >
                 {menu.icon && (
-                  <span className="mr-[12px]">
-                    <menu.icon />
+                  <span className="mr-[12px] flex justify-center">
+                    <menu.icon width={20} height={20} />
                   </span>
                 )}
                 <span>{menu.title}</span>
@@ -83,8 +83,8 @@ const MenuPro = React.memo(() => {
                 style={{ fontWeight: 600, fontSize: "14px" }}
               >
                 {menu.icon && (
-                  <span className="mr-[12px]">
-                    <menu.icon />
+                  <span className="mr-[12px] flex justify-center">
+                    <menu.icon width={20} height={20} />
                   </span>
                 )}
                 <span>{menu.title}</span>

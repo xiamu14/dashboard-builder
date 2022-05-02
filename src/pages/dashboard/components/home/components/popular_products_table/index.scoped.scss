@@ -1,0 +1,18 @@
+.product-cover {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 12px;
+}
+
+.product-title {
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--neutral-07);
+}
+
+.product-earning {
+  font-size: 15px;
+  color: var(--neutral-07);
+}

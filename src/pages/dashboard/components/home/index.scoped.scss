@@ -66,12 +66,32 @@
     }
     .duration-box {
       width: fit-content;
-      padding: 0 8px 0 2px;
+      padding: 0 8px 0 1px;
       height: 24px;
       border-radius: 12px;
       border: 1px solid var(--neutral-03);
       .text {
         margin-left: 4px;
+        color: var(--neutral-04);
+      }
+    }
+  }
+  .refund-requests-box {
+    .requests-box {
+      margin-bottom: 24px;
+    }
+    ::v-deep .icon {
+      width: 48px;
+      height: 48px;
+      margin-right: 12px;
+    }
+    .content {
+      font-size: 15px;
+      line-height: 1.4;
+      color: var(--neutral-07);
+      padding-top: 4px;
+      word-wrap: break-word;
+      span.gray {
         color: var(--neutral-04);
       }
     }

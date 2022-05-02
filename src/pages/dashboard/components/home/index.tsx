@@ -1,4 +1,6 @@
 import BlockHeader from "@src/components/block_header";
+import Button from "@src/components/button";
+import Comments from "@src/components/comments";
 import ContentBox from "@src/components/content_box";
 import IconPlate from "@src/components/icon_plate";
 import Tab from "@src/components/tab";
@@ -8,6 +10,7 @@ import { randomColor } from "@src/utils/random_color";
 import { Avatar } from "antd";
 import {
   ActivityLight,
+  BasketLight,
   DesignLight,
   DirectionRight,
   FacebookLight,
@@ -20,6 +23,7 @@ import {
   VideoRecorderLight,
 } from "maple-icons";
 import React from "react";
+import PopularProductsTable from "./components/popular_products_table";
 import ProductViewsBarChart from "./components/product_views_bar_chart";
 import TabHeader from "./components/tab_header";
 import { TabPane } from "./components/tab_pane";
@@ -241,18 +245,47 @@ export default function Home() {
                   bgColor={colors["secondary-03"]}
                   title="Popular products"
                 />
+                <PopularProductsTable />
               </div>
               <div className="item atom-desktop-block">
                 <BlockHeader
                   bgColor={colors["secondary-05"]}
                   title="Comments"
                 />
+                <Comments />
+                <Button className="!w-full" plain>
+                  View all
+                </Button>
               </div>
-              <div className="item atom-desktop-block">
+              <div className="item atom-desktop-block refund-requests-box">
                 <BlockHeader
                   bgColor={colors["secondary-01"]}
                   title="Refund requests"
                 />
+                <div className="requests-box w-full flex justify-start items-start">
+                  <IconPlate
+                    className="icon"
+                    circle
+                    style={{
+                      backgroundColor: colors["secondary-01"],
+                    }}
+                  >
+                    <BasketLight
+                      width={20}
+                      height={19}
+                      color={colors["primary-03"]}
+                    />
+                  </IconPlate>
+                  <p className="content flex-1">
+                    <span className="gray">You have</span> 52 open refund
+                    requests{" "}
+                    <span className="gray">to action. This includes</span> 8 new
+                    requests. 👀
+                  </p>
+                </div>
+                <Button className="!w-full" plain>
+                  Review refund requests
+                </Button>
               </div>
             </div>
           </div>
