@@ -1,8 +1,10 @@
 .header {
+  position: relative;
   width: 100%;
   height: 75px;
+  padding: 0 28px;
+  z-index: 2;
   background: #ffffff;
-  padding: 28px;
   box-shadow: inset 1px 0px 0px 0px #f4f4f4, inset 1px 0px 0px 0px #f4f4f4;
   .search-bar {
     width: 360px;

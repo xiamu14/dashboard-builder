@@ -31,7 +31,7 @@ specifiers:
   clsx: ^1.1.1
   codegem: ^0.0.4-alpha.0
   codegem-load-file: ^0.0.7-beta.0
-  codegem-machine-react-svg: 1.0.1-beta.0
+  codegem-machine-react-svg: 1.0.2-beta.0
   data-matcher: '2'
   dayjs: ^1.10.7
   dotenv: ^10.0.0
@@ -135,7 +135,7 @@ devDependencies:
   '@typescript-eslint/parser': 4.33.0_ullk6owgf2illa252vlrfs7qv4
   codegem: 0.0.4-alpha.0
   codegem-load-file: 0.0.7-beta.0
-  codegem-machine-react-svg: registry.npmjs.org/codegem-machine-react-svg/1.0.1-beta.0
+  codegem-machine-react-svg: registry.npmjs.org/codegem-machine-react-svg/1.0.2-beta.0
   eslint: 7.32.0
   eslint-config-alloy: 4.4.0
   eslint-plugin-jest: 25.7.0_4zi6j7ayatxywsxnk24j7zfwdm
@@ -8598,10 +8598,10 @@ packages:
       supports-color: registry.npmjs.org/supports-color/5.5.0
     dev: true
 
-  registry.npmjs.org/codegem-machine-react-svg/1.0.1-beta.0:
-    resolution: {integrity: sha512-aoiU0dy1chutEaPI31ZNt4C2uvDDPkBNc/cqvka9C1SQEjAsvhuwSR6nhy9+jC4sChYOWEALGekPq7kW2RkdZQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/codegem-machine-react-svg/-/codegem-machine-react-svg-1.0.1-beta.0.tgz}
+  registry.npmjs.org/codegem-machine-react-svg/1.0.2-beta.0:
+    resolution: {integrity: sha512-3T1xDzbczDrhBUd9Q5f2bAe7U/MQkspLsMA2vOr7bI2t4y3oz3+FGYxiElW3J4OtnvJ5Ua5TERMSkeiKCImhUw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/codegem-machine-react-svg/-/codegem-machine-react-svg-1.0.2-beta.0.tgz}
     name: codegem-machine-react-svg
-    version: 1.0.1-beta.0
+    version: 1.0.2-beta.0
     dependencies:
       '@svgr/core': registry.npmjs.org/@svgr/core/6.2.1
       '@svgr/plugin-jsx': registry.npmjs.org/@svgr/plugin-jsx/6.2.1_@svgr+core@6.2.1

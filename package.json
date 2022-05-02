@@ -77,7 +77,7 @@
     "@typescript-eslint/parser": "^4.31.1",
     "codegem": "^0.0.4-alpha.0",
     "codegem-load-file": "^0.0.7-beta.0",
-    "codegem-machine-react-svg": "1.0.1-beta.0",
+    "codegem-machine-react-svg": "1.0.2-beta.0",
     "eslint": "^7.32.0",
     "eslint-config-alloy": "^4.3.0",
     "eslint-plugin-jest": "^25.2.4",
