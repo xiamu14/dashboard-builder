@@ -4,6 +4,7 @@ import _traverse from "@babel/traverse";
 import * as t from "@babel/types";
 import { defineConfig } from "codegem";
 import loadFile from "codegem-load-file";
+import createReactSvg from "codegem-machine-react-svg";
 import fs from "fs";
 import { createRequire } from "module";
 import path from "path";
@@ -31,6 +32,12 @@ export default defineConfig({
     {
       use: [loadFile("./src/style/color_variable.css")],
       machine: createColorVariable(),
+    },
+    {
+      use: [loadFile(`./src/assets/flags`)],
+      machine: createReactSvg({
+        output: "./src/components/icon_flags",
+      }),
     },
   ],
 });

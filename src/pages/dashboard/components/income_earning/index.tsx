@@ -1,5 +1,12 @@
 import BlockHeader from "@src/components/block_header";
 import ContentBox from "@src/components/content_box";
+import {
+  FlagsDe,
+  FlagsGb,
+  FlagsIt,
+  FlagsNl,
+  FlagsUs,
+} from "@src/components/icon_flags";
 import IconPlate from "@src/components/icon_plate";
 import Statistic from "@src/components/statistic";
 import { colors } from "@src/constant";
@@ -91,11 +98,31 @@ export default function IncomeEarning() {
           />
           <div className="country-list">
             {[
-              { country: "United States", income: "$876.77" },
-              { country: "Germany", income: "$128.77" },
-              { country: "Netherlands", income: "$128.77" },
-              { country: "United Kingdom", income: "$128.77" },
-              { country: "Italy", income: "$128.77" },
+              {
+                country: "United States",
+                icon: <FlagsUs width={20} height={16} />,
+                income: "$876.77",
+              },
+              {
+                country: "Germany",
+                icon: <FlagsDe width={20} height={16} />,
+                income: "$128.77",
+              },
+              {
+                country: "Netherlands",
+                icon: <FlagsNl width={20} height={16} />,
+                income: "$128.77",
+              },
+              {
+                country: "United Kingdom",
+                icon: <FlagsGb width={20} height={16} />,
+                income: "$128.77",
+              },
+              {
+                country: "Italy",
+                icon: <FlagsIt width={20} height={16} />,
+                income: "$128.77",
+              },
             ].map((item, index) => {
               return (
                 <div
@@ -103,7 +130,7 @@ export default function IncomeEarning() {
                   className="item flex justify-between items-center"
                 >
                   <IconPlate circle className="icon">
-                    {/* <img /> */}
+                    {item.icon}
                   </IconPlate>
                   <div>{item.country}</div>
                   <div className="flex-1" />
