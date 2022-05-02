@@ -3,13 +3,14 @@ import React from "react";
 import "./index.scss";
 interface Props {
   color?: string;
+  className?: string;
 }
 
 const Tag = React.memo(
-  ({ color, children }: React.PropsWithChildren<Props>) => {
+  ({ color, className = "", children }: React.PropsWithChildren<Props>) => {
     return (
       <div
-        className="tag"
+        className={`tag ${className}`}
         style={{ backgroundColor: color ?? colors["neutral-03"] }}
       >
         {children}

@@ -16,11 +16,18 @@ const motionVariants = {
 };
 
 interface Props {
-  title: string;
+  title?: string;
+  className?: string;
+  banner?: string;
 }
 
 const ContentBox = React.memo(
-  ({ title, children }: React.PropsWithChildren<Props>) => {
+  ({
+    title = "",
+    className = "",
+    banner,
+    children,
+  }: React.PropsWithChildren<Props>) => {
     return (
       <motion.div
         initial="initial"
@@ -31,10 +38,17 @@ const ContentBox = React.memo(
       >
         <div className="content-box">
           <Header />
-          <div className="content-wrapper">
-            <div className="content-title">{title}</div>
-            <div className="content">{children}</div>
-          </div>
+          {!banner ? (
+            <div className={`content-wrapper ${className}`}>
+              <div className="content-title">{title}</div>
+              <div className="content">{children}</div>
+            </div>
+          ) : (
+            <div className={`banner-wrapper ${className}`}>
+              <img src={banner} className="banner" />
+              <div className="content">{children}</div>
+            </div>
+          )}
         </div>
       </motion.div>
     );

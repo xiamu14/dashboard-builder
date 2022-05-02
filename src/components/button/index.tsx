@@ -12,7 +12,7 @@ const Button = memo(
     className = "",
   }: React.PropsWithChildren<Props>) => {
     return (
-      <div className={`button-box ${plain ? "plain" : "fill"} ${className}`}>
+      <div className={`button-box ${plain && "plain"} ${className}`}>
         {children}
       </div>
     );
