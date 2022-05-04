@@ -7,7 +7,7 @@ import { DirectionRight } from "maple-icons";
 import React, { memo } from "react";
 import "./index.scoped.scss";
 
-export const TabPane = memo(() => {
+const TabPaneCustomer = memo(() => {
   return (
     <div className="tab-pane-box w-full flex flex-col justify-center">
       <div className="desc-box flex justify-between items-center">
@@ -55,3 +55,5 @@ export const TabPane = memo(() => {
     </div>
   );
 });
+
+export default TabPaneCustomer;

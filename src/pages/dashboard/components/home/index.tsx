@@ -26,7 +26,8 @@ import React from "react";
 import PopularProductsTable from "./components/popular_products_table";
 import ProductViewsBarChart from "./components/product_views_bar_chart";
 import TabHeader from "./components/tab_header";
-import { TabPane } from "./components/tab_pane";
+import TabPaneChart from "./components/tab_pane_chart";
+import TabPaneCustomer from "./components/tab_pane_customer";
 import "./index.scoped.scss";
 
 export default function Home() {
@@ -119,7 +120,7 @@ export default function Home() {
                           iconPlateBg={colors["secondary-03"]}
                         />
                       ),
-                      pane: <TabPane />,
+                      pane: <TabPaneCustomer />,
                     },
                     {
                       header: (
@@ -139,7 +140,7 @@ export default function Home() {
                           iconPlateBg={colors["secondary-02"]}
                         />
                       ),
-                      pane: <TabPane />,
+                      pane: <TabPaneChart />,
                     },
                   ]}
                 />
