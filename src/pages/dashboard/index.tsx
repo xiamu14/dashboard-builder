@@ -34,7 +34,11 @@ export default function Dashboard() {
 
   return (
     <Layout className="dashboard-box">
-      <Sider className="dashboard-sider" width={340}>
+      <Sider
+        className="dashboard-sider"
+        // width="24%"
+        // style={{ maxWidth: "300px" }}
+      >
         <div className="sider-logo" />
         <div className="menu-box overflow-y-scroll overflow-x-hidden">
           <MenuPro />

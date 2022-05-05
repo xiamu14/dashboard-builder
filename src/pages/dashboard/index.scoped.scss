@@ -7,9 +7,9 @@
 .dashboard-sider {
   background-color: #ffffff;
   height: 100%;
-  width: 340px;
-  max-width: 340px;
-  min-width: 340px;
+  width: 320px !important;
+  max-width: 320px !important;
+  min-width: 320px !important;
   ::v-deep .ant-layout-sider-children {
     display: flex;
     flex-direction: column;
