@@ -1,6 +1,6 @@
 import { colors } from "@src/constant";
 import React from "react";
-import "./index.scss";
+import "./index.scoped.scss";
 interface Props {
   color?: string;
   className?: string;

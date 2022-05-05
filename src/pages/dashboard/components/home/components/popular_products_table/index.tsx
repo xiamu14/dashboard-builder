@@ -1,6 +1,5 @@
+import ActiveTag from "@src/components/ActiveTag";
 import Button from "@src/components/button";
-import Tag from "@src/components/tag";
-import { colors } from "@src/constant";
 import { randomColor } from "@src/utils/random_color";
 import { Table, TableColumnsType } from "antd";
 import React, { memo } from "react";
@@ -69,21 +68,7 @@ const columns: TableColumnsType<ProductType> = [
       return (
         <div className="flex flex-col justify-center items-center">
           <span className="product-earning">{earning}</span>
-          <Tag
-            color={
-              record.isActive ? colors["secondary-04"] : colors["secondary-01"]
-            }
-          >
-            <span
-              style={{
-                color: record.isActive
-                  ? colors["primary-02"]
-                  : colors["primary-03"],
-              }}
-            >
-              {record.isActive ? "Active" : "Deactive"}
-            </span>
-          </Tag>
+          <ActiveTag isActive={record.isActive} />
         </div>
       );
     },

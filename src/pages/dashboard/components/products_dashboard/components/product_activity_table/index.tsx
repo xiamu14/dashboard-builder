@@ -1,14 +1,8 @@
-import Tag from "@src/components/tag";
-import TrendTips from "@src/components/trend_tips";
+import Trend from "@src/components/trend";
+import { TrendType } from "@src/components/trend/types";
 import { Table, TableColumnsType } from "antd";
 import React, { memo } from "react";
 import "./index.scss";
-
-interface TrendType {
-  current: string;
-  isRise?: boolean;
-  percent?: number;
-}
 
 interface DataItemType {
   key: string;
@@ -43,7 +37,6 @@ const columns: TableColumnsType<DataItemType> = [
     title: "Week",
     dataIndex: "week",
     key: "week",
-    render: (text: string) => <a>{text}</a>,
   },
   {
     title: "Products",
@@ -88,18 +81,3 @@ const ProductActivityTable = memo(() => {
 });
 
 export default ProductActivityTable;
-
-function Trend(trendData: TrendType) {
-  return (
-    <div className="flex justify-start items-center">
-      <Tag className="mr-4px">{trendData.current}</Tag>
-      {trendData.isRise !== undefined && (
-        <TrendTips
-          percent={trendData.percent as number}
-          isRise={trendData.isRise}
-          style={{ backgroundColor: "transparent" }}
-        />
-      )}
-    </div>
-  );
-}
