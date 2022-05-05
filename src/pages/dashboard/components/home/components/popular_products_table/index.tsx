@@ -1,8 +1,10 @@
 import ActiveTag from "@src/components/ActiveTag";
 import Button from "@src/components/button";
+import productImagesState from "@src/recoil/product_images";
 import { randomColor } from "@src/utils/random_color";
 import { Table, TableColumnsType } from "antd";
-import React, { memo } from "react";
+import React, { memo, useMemo } from "react";
+import { useRecoilValue } from "recoil";
 import "./index.scoped.scss";
 interface ProductType {
   key: string;
@@ -76,9 +78,20 @@ const columns: TableColumnsType<ProductType> = [
 ];
 
 const PopularProductsTable = memo(() => {
+  const productImages = useRecoilValue(productImagesState);
+
+  const fullDataSource = useMemo(() => {
+    if (productImages.length > 0) {
+      return dataSource.map((item, index) => {
+        return { ...item, cover: productImages[index].urls.regular };
+      });
+    }
+    return [];
+  }, [productImages]);
+
   return (
     <div className="w-full">
-      <Table columns={columns} dataSource={dataSource} pagination={false} />
+      <Table columns={columns} dataSource={fullDataSource} pagination={false} />
       <Button className="!w-full" plain>
         All products
       </Button>

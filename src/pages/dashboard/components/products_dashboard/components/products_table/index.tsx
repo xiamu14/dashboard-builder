@@ -2,8 +2,11 @@ import ActiveTag from "@src/components/ActiveTag";
 import Tag from "@src/components/tag";
 import Trend from "@src/components/trend";
 import { TrendType } from "@src/components/trend/types";
+import productImagesState from "@src/recoil/product_images";
 import { Table, TableColumnsType } from "antd";
-import React, { memo } from "react";
+import React, { memo, useMemo } from "react";
+import { useRecoilValue } from "recoil";
+import "./index.scoped.scss";
 
 interface ProductType {
   key: string;
@@ -23,37 +26,19 @@ interface ProductType {
   likes: string;
 }
 
-const data: ProductType[] = new Array(6).fill(null).map((_, index) => {
-  return {
-    key: `${index}`,
-    product: {
-      image: "",
-      name: "Bento Matte 3D",
-      desc: "UI design kit",
-    },
-    status: { isActive: true },
-    price: "$48",
-    sales: {
-      current: "#3,200",
-      isRise: true,
-      percent: 55.8,
-    },
-    views: "48k",
-    likes: "8",
-  };
-});
-
 const columns: TableColumnsType<ProductType> = [
   {
     title: "Product",
     dataIndex: "product",
     render: (product) => {
       return (
-        <div className="flex justify-start items-center">
-          <div />
+        <div className="product-box flex justify-start items-center">
+          <div className="product-image-box">
+            <img src={product.image} />
+          </div>
           <div>
-            <p>{product.name}</p>
-            <p>{product.desc}</p>
+            <p className="name">{product.name}</p>
+            <p className="desc">{product.desc}</p>
           </div>
         </div>
       );
@@ -94,12 +79,40 @@ const columns: TableColumnsType<ProductType> = [
 ];
 
 const ProductsTable = memo(() => {
+  const productImages = useRecoilValue(productImagesState);
+
+  const fullDataSource = useMemo(() => {
+    if (productImages.length > 0) {
+      return new Array(6).fill(null).map((_, index) => {
+        return {
+          key: `${index}`,
+          product: {
+            image: productImages[index].urls.regular,
+            name: "Bento Matte 3D Illustration",
+            desc: "UI design kit",
+          },
+          status: { isActive: true },
+          price: "$48",
+          sales: {
+            current: "#3,200",
+            isRise: true,
+            percent: 55.8,
+          },
+          views: "48k",
+          likes: "8",
+        };
+      });
+    }
+    return [];
+  }, [productImages]);
+
   return (
     <Table
-      dataSource={data}
+      dataSource={fullDataSource}
       columns={columns}
       pagination={{ size: "small", hideOnSinglePage: true }}
       rowKey="key"
+      rowSelection={{}}
     />
   );
 });
