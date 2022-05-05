@@ -42,6 +42,10 @@ a {
   border-bottom-width: 0;
 }
 
+.ant-modal-content {
+  border-radius: 32px;
+}
+
 /* .ant-pagination-prev .ant-pagination-item-link,
 .ant-pagination-next .ant-pagination-item-link {
   border-radius: 50%;
