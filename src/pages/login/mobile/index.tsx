@@ -6,7 +6,7 @@ import React, { memo, useCallback } from "react";
 import { BaseProps } from "../types";
 import "./index-mobile.scoped.scss";
 
-const MobileView = memo(({ onSignUp }: BaseProps) => {
+const MobileLogin = memo(({ onSignUp }: BaseProps) => {
   const handleSignUp = useCallback(() => {
     Modal.info({
       title: "请使用 PC 访问",
@@ -38,4 +38,4 @@ const MobileView = memo(({ onSignUp }: BaseProps) => {
   );
 });
 
-export default MobileView;
+export default MobileLogin;

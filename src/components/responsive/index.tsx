@@ -2,13 +2,11 @@ import { useMobile } from "@src/hooks/use_responsive";
 import React, { ReactNode } from "react";
 
 interface Props {
-  mobileView: ReactNode;
+  mobile: ReactNode;
+  desktop: ReactNode;
 }
 
-export default function Responsive({
-  children,
-  mobileView,
-}: React.PropsWithChildren<Props>) {
+export default function Responsive({ mobile, desktop }: Props) {
   const isMobile = useMobile();
   console.log(
     "%c debug isMobile",
@@ -17,6 +15,7 @@ export default function Responsive({
   );
 
   if (isMobile === undefined) return null;
-  if (isMobile) return <div>{mobileView}</div>;
-  return <div>{children}</div>;
+  if (isMobile) return <div>{mobile}</div>;
+  // TODO: tablet
+  return <div>{desktop}</div>;
 }

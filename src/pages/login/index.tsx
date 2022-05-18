@@ -8,7 +8,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import SignUp from "./components/sign_up";
 import "./index.scoped.scss";
-import MobileView from "./mobile";
+import MobileLogin from "./mobile";
 import { BaseProps } from "./types";
 import { createWechatLoginUrl } from "./utils";
 
@@ -117,8 +117,9 @@ export default function LoginEntry() {
   };
 
   return (
-    <Responsive mobileView={<MobileView onSignUp={handleMockLogin} />}>
-      <Login onSignUp={handleMockLogin} />
-    </Responsive>
+    <Responsive
+      mobile={<MobileLogin onSignUp={handleMockLogin} />}
+      desktop={<Login onSignUp={handleMockLogin} />}
+    />
   );
 }

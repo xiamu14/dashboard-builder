@@ -1,4 +1,5 @@
 import { LoginPath } from "@src/constant";
+import { useMobile } from "@src/hooks/use_responsive";
 import { useUserInfo } from "@src/hooks/use_user_info";
 import userModel from "@src/model/user";
 import RouterPro from "@src/pages/dashboard/router";
@@ -23,6 +24,8 @@ export default function Dashboard() {
     // 判断 isLogin
   }, [userInfo]);
 
+  const isMobile = useMobile();
+
   const handleExit = () => {
     userModel.clearToken();
     history.push(LoginPath);
@@ -34,16 +37,18 @@ export default function Dashboard() {
 
   return (
     <Layout className="dashboard-box">
-      <Sider
-        className="dashboard-sider"
-        // width="24%"
-        // style={{ maxWidth: "300px" }}
-      >
-        <div className="sider-logo" />
-        <div className="menu-box overflow-y-scroll overflow-x-hidden">
-          <MenuPro />
-        </div>
-      </Sider>
+      {!isMobile && (
+        <Sider
+          className="dashboard-sider"
+          // width="24%"
+          // style={{ maxWidth: "300px" }}
+        >
+          <div className="sider-logo" />
+          <div className="menu-box overflow-y-scroll overflow-x-hidden">
+            <MenuPro />
+          </div>
+        </Sider>
+      )}
       <Layout className="dashboard-content">
         <RouterPro />
       </Layout>
