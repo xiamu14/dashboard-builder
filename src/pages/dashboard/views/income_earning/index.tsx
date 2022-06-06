@@ -10,8 +10,8 @@ import {
 import IconPlate from "@src/components/icon_plate";
 import Statistic from "@src/components/statistic";
 import { colors } from "@src/constant";
-import ProductViewsBarChart from "@src/pages/dashboard/components/home/components/product_views_bar_chart";
-import ProductActivityTable from "@src/pages/dashboard/components/products_dashboard/components/product_activity_table";
+import ProductViewsBarChart from "@src/pages/dashboard/views/home/components/product_views_bar_chart";
+import ProductActivityTable from "@src/pages/dashboard/views/products_dashboard/components/product_activity_table";
 import { ActivityLight, PieChartLight, ShoppingBagLight } from "maple-icons";
 import React from "react";
 import "./index.scoped.scss";

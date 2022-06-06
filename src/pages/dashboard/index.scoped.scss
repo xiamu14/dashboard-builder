@@ -4,88 +4,7 @@
   background: #f7f8fa;
   overflow-y: hidden;
 }
-.dashboard-sider {
-  background-color: #ffffff;
-  height: 100%;
-  width: 320px !important;
-  max-width: 320px !important;
-  min-width: 320px !important;
-  ::v-deep .ant-layout-sider-children {
-    display: flex;
-    flex-direction: column;
-    padding: 26px;
-  }
-  ::v-deep .ant-menu-sub.ant-menu-inline {
-    padding-left: 36px !important;
-    background: white;
-  }
-  ::v-deep .ant-menu-sub .ant-menu-item {
-    padding-left: 12px !important;
-  }
-  ::v-deep .ant-menu-item-selected {
-    background: #efefef !important;
-    box-shadow: inset 0px 1px 1px 0px #ffffff,
-      inset 0px -2px 1px 0px rgba(0, 0, 0, 0.05), inset 0px 1px 1px 0px #ffffff,
-      inset 0px -2px 1px 0px rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
-    border-right-width: 0 !important;
-    a {
-      color: var(--neutral-07) !important;
-    }
-    &::after {
-      opacity: 0;
-    }
-  }
-  .menu-box {
-    flex: 1;
-    &::-webkit-scrollbar {
-      background-color: #ffffff;
-      width: 2px;
-    }
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      width: 2px;
-      background-color: #555;
-    }
-  }
-  .info-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 24px;
-    .info {
-      display: flex;
-      align-items: center;
-      .avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-right: 6px;
-      }
-      .username {
-        font-size: 16px;
-        font-weight: bold;
-      }
-      .team-name {
-        font-size: 14px;
-        color: #969799;
-      }
-    }
-    .btn-exit {
-      font-size: 18px;
-      color: #969799;
-      cursor: pointer;
-    }
-  }
-  .sider-logo {
-    width: 42px;
-    height: 46px;
-    margin-bottom: 33px;
-    background: url("../../assets/logo_light@2x.png") center no-repeat;
-    background-size: cover;
-  }
-}
+
 ::v-deep .dashboard-content {
   height: 100%;
   display: flex;
@@ -93,24 +12,4 @@
   justify-content: flex-start;
   align-items: flex-start;
   overflow: hidden;
-}
-
-::v-deep .ant-menu-inline {
-  border-right: 0px !important;
-}
-
-::v-deep .table-box {
-  overflow: hidden;
-}
-
-::v-deep .ant-table-thead > tr > th,
-::v-deep .ant-table-tbody > tr > td,
-::v-deep .ant-table tfoot > tr > th,
-::v-deep .ant-table tfoot > tr > td {
-  padding: 16px 6px;
-}
-
-::v-deep .ant-tag {
-  white-space: pre-line;
-  word-wrap: break-word;
 }

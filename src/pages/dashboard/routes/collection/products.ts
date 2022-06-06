@@ -1,4 +1,4 @@
-import ProductsDashboard from "@src/pages/dashboard/components/products_dashboard";
+import ProductsDashboard from "@src/pages/dashboard/views/products_dashboard";
 import { DiamondLight } from "maple-icons";
 import { createRoutes } from "../utils";
 

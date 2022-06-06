@@ -1,18 +1,19 @@
+import Responsive from "@src/components/responsive";
 import { LoginPath } from "@src/constant";
-import { useMobile } from "@src/hooks/use_responsive";
 import { useUserInfo } from "@src/hooks/use_user_info";
 import userModel from "@src/model/user";
+import MenuDesktop from "@src/pages/dashboard/menu_desktop";
+import MenuMobile from "@src/pages/dashboard/menu_mobile";
 import RouterPro from "@src/pages/dashboard/router";
 import { Layout } from "antd";
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "./index.scoped.scss";
-import MenuPro from "./menu";
-const { Sider } = Layout;
 
 export default function Dashboard() {
   const userInfo = useUserInfo();
   const history = useHistory();
+
   useEffect(() => {
     if (!userModel.isLogin) {
       history.push(LoginPath);
@@ -23,8 +24,6 @@ export default function Dashboard() {
     console.log("debug userInfo", userInfo);
     // 判断 isLogin
   }, [userInfo]);
-
-  const isMobile = useMobile();
 
   const handleExit = () => {
     userModel.clearToken();
@@ -37,18 +36,7 @@ export default function Dashboard() {
 
   return (
     <Layout className="dashboard-box">
-      {!isMobile && (
-        <Sider
-          className="dashboard-sider"
-          // width="24%"
-          // style={{ maxWidth: "300px" }}
-        >
-          <div className="sider-logo" />
-          <div className="menu-box overflow-y-scroll overflow-x-hidden">
-            <MenuPro />
-          </div>
-        </Sider>
-      )}
+      <Responsive mobile={<MenuMobile />} desktop={<MenuDesktop />} />
       <Layout className="dashboard-content">
         <RouterPro />
       </Layout>

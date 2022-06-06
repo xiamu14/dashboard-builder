@@ -1,0 +1,20 @@
+.dashboard-sider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #fff;
+  z-index: 100;
+  .header {
+    height: 96px;
+    background: #fcfcfc;
+    border-bottom: 2px solid #efefef;
+    .sider-logo {
+      width: 42px;
+      height: 46px;
+      background: url("../../../assets/logo_light@2x.png") center no-repeat;
+      background-size: cover;
+    }
+  }
+}

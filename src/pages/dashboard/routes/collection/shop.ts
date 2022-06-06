@@ -1,4 +1,4 @@
-import Shop from "@src/pages/dashboard/components/shop";
+import Shop from "@src/pages/dashboard/views/shop";
 import { StoreLight } from "maple-icons";
 import { createRoutes } from "../utils";
 

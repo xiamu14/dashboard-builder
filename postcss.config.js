@@ -2,7 +2,7 @@ module.exports = {
   plugins: {
     "postcss-pxtorem": {
       rootValue: (input) => {
-        return input.file.indexOf("-mobile.") > -1 ? 37.5 : 144;
+        return input.file.indexOf("_mobile.") > -1 ? 37.5 : 144;
       },
       unitPrecision: 3,
       propList: ["*"],

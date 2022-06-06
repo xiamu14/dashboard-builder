@@ -1,4 +1,4 @@
-import Home from "@src/pages/dashboard/components/home";
+import Home from "@src/pages/dashboard/views/home";
 import { HomeLight } from "maple-icons";
 import { createRoutes } from "../utils";
 

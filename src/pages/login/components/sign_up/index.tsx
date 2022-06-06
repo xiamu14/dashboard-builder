@@ -1,7 +1,7 @@
 import { LogoApple, LogoGoogle, MailLight } from "maple-icons";
 import React, { memo } from "react";
-import "./index-mobile.scoped.scss";
 import "./index.scoped.scss";
+import "./index_mobile.scoped.scss";
 const SignUp = memo(({ onSignUp }: { onSignUp: () => void }) => {
   return (
     <div className="sign-up flex flex-col justify-center items-center w-full h-full">

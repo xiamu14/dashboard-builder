@@ -1,11 +1,25 @@
 import { menus } from "@src/pages/dashboard/routes";
 import { MenuItemType, MenuType } from "@src/pages/dashboard/routes/types";
-import { Menu } from "antd";
+import { Layout, Menu } from "antd";
 import React, { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import "./index.scoped.scss";
+const { Sider } = Layout;
+
+export default function MenuDesktop() {
+  return (
+    <Sider className="dashboard-sider">
+      <div className="sider-logo" />
+      <div className="menu-box overflow-y-scroll overflow-x-hidden">
+        <Navigation />
+      </div>
+    </Sider>
+  );
+}
+
 const { SubMenu, ItemGroup: MenuItemGroup } = Menu;
 
-const MenuPro = React.memo(() => {
+const Navigation = React.memo(() => {
   const [openKeys, setOpenKeys] = React.useState<React.Key[]>([""]);
   const location = useLocation();
   const pathnameRef = useRef(location.pathname);
@@ -114,5 +128,3 @@ const MenuPro = React.memo(() => {
     </Menu>
   );
 });
-
-export default MenuPro;

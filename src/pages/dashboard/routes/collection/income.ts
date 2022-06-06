@@ -1,4 +1,4 @@
-import IncomeEarning from "@src/pages/dashboard/components/income_earning";
+import IncomeEarning from "@src/pages/dashboard/views/income_earning";
 import { PieChartLight } from "maple-icons";
 import { createRoutes } from "../utils";
 
