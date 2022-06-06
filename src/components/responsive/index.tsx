@@ -1,9 +1,8 @@
 import { useMobile } from "@src/hooks/use_responsive";
-import React, { ReactNode } from "react";
 
 interface Props {
-  mobile: ReactNode;
-  desktop: ReactNode;
+  mobile: JSX.Element;
+  desktop: JSX.Element;
 }
 
 export default function Responsive({ mobile, desktop }: Props) {
@@ -15,7 +14,7 @@ export default function Responsive({ mobile, desktop }: Props) {
   );
 
   if (isMobile === undefined) return null;
-  if (isMobile) return <div>{mobile}</div>;
+  if (isMobile) return mobile;
   // TODO: tablet
-  return <div>{desktop}</div>;
+  return desktop;
 }

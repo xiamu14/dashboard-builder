@@ -1,0 +1,66 @@
+.login-page {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  .login-box {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    width: 620px;
+  }
+  .side-info {
+    position: relative;
+    .logo {
+      position: absolute;
+      width: 42px;
+      height: 46px;
+      top: 26px;
+      left: 26px;
+      background: url("../../assets/logo_light@2x.png") center no-repeat;
+      background-size: cover;
+    }
+    .content {
+      .illustration {
+        width: 153px;
+        height: 141px;
+        margin: 0 auto 51px;
+        background: url("../../assets/side_illustration@2x.png") center
+          no-repeat;
+        background-size: cover;
+      }
+      .title {
+        margin-bottom: 50px;
+        text-align: center;
+      }
+      .detail {
+        margin-bottom: 24px;
+        &-text {
+          margin-left: 14px;
+          color: var(--neutral-04);
+        }
+      }
+      .detail:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .container {
+    position: relative;
+    .sign-in {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      font-size: 12px;
+      cursor: pointer;
+      .question {
+        margin-right: 6px;
+        color: var(--neutral-shades-04-75);
+      }
+    }
+  }
+}
