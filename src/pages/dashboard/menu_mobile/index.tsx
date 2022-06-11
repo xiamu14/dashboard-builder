@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { CloseLight } from "maple-icons";
 import React, { useCallback, useRef } from "react";
 import { useRecoilState } from "recoil";
-import "./index_mobile.scoped.scss";
+import "./index.scoped.scss";
 
 const sidebar = {
   open: (height = 1000) => ({

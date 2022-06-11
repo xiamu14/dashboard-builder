@@ -8,7 +8,7 @@ const { Sider } = Layout;
 
 export default function MenuDesktop() {
   return (
-    <Sider className="dashboard-sider">
+    <Sider className="dashboard-sider-desktop">
       <div className="sider-logo" />
       <div className="menu-box overflow-y-scroll overflow-x-hidden">
         <Navigation />

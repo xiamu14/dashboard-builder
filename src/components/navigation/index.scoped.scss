@@ -43,5 +43,20 @@
     ::v-deep .ant-menu-sub .ant-menu-item {
       padding-left: 12px !important;
     }
+    ::v-deep .ant-menu-item-selected {
+      background: #efefef !important;
+      box-shadow: inset 0px 1px 1px 0px #ffffff,
+        inset 0px -2px 1px 0px rgba(0, 0, 0, 0.05),
+        inset 0px 1px 1px 0px #ffffff,
+        inset 0px -2px 1px 0px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      border-right-width: 0 !important;
+      a {
+        color: var(--neutral-07) !important;
+      }
+      &::after {
+        opacity: 0;
+      }
+    }
   }
 }
