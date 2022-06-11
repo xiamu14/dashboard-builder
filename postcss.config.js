@@ -1,8 +1,9 @@
 module.exports = {
   plugins: {
-    "postcss-pxtorem": {
-      rootValue: (input) => {
-        return input.file.indexOf("_mobile.") > -1 ? 37.5 : 144;
+    "@redchili/postcss-pxtorem": {
+      rootValue: 144,
+      mediaRules: {
+        "screen and (max-width: 500px)": 37.5,
       },
       unitPrecision: 3,
       propList: ["*"],

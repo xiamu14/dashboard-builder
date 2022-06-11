@@ -8,7 +8,7 @@ import {
 } from "maple-icons";
 import React from "react";
 import { useSetRecoilState } from "recoil";
-import "./index_mobile.scoped.scss";
+import "./index.scoped.scss";
 
 export default function HeaderMobile() {
   const setIsOpen = useSetRecoilState(menuSiderAtom);

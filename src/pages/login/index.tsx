@@ -5,7 +5,6 @@ import userModel from "@src/model/user";
 import LoginDesktop from "@src/pages/login/desktop";
 import React from "react";
 import { useHistory } from "react-router-dom";
-import "./index.scoped.scss";
 import LoginMobile from "./mobile";
 import { createWechatLoginUrl } from "./utils";
 

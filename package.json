@@ -69,6 +69,7 @@
     "@babel/parser": "^7.17.9",
     "@babel/traverse": "^7.17.9",
     "@babel/types": "^7.17.0",
+    "@redchili/postcss-pxtorem": "^1.0.1-alpha.3",
     "@svgr/core": "^6.2.1",
     "@svgr/plugin-jsx": "^6.2.1",
     "@svgr/plugin-prettier": "^6.1.2",

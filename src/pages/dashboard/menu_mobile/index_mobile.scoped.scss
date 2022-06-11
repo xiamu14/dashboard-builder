@@ -17,4 +17,10 @@
       background-size: cover;
     }
   }
+  .navigation-box {
+    padding: 24px;
+    ::v-deep .menu-icon {
+      margin-right: 14px;
+    }
+  }
 }

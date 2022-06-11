@@ -1,4 +1,4 @@
-import ActiveTag from "@src/components/ActiveTag";
+import ActiveTag from "@src/components/active_tag";
 import Tag from "@src/components/tag";
 import Trend from "@src/components/trend";
 import { TrendType } from "@src/components/trend/types";

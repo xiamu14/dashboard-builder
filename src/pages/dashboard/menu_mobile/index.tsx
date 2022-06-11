@@ -1,3 +1,4 @@
+import Navigation from "@src/components/navigation";
 import { useDimensions } from "@src/hooks/use_dimensions";
 import { menuSiderAtom } from "@src/recoil/menu_mobile";
 import { motion } from "framer-motion";
@@ -47,6 +48,9 @@ export default function MenuMobile() {
           <CloseLight width={16} height={16} onClick={() => toggleOpen()} />
           <div />
           <div className="sider-logo" />
+        </div>
+        <div className="navigation-box">
+          <Navigation />
         </div>
       </motion.div>
     </motion.div>

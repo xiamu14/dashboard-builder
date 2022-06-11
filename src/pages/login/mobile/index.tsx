@@ -4,7 +4,7 @@ import { rgba } from "@src/utils/css";
 import { Modal } from "antd";
 import React, { memo, useCallback } from "react";
 import { BaseProps } from "../types";
-import "./index_mobile.scoped.scss";
+import "./index.scoped.scss";
 
 const LoginMobile = memo(({ onSignUp }: BaseProps) => {
   const handleSignUp = useCallback(() => {

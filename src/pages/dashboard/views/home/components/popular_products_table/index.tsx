@@ -1,4 +1,4 @@
-import ActiveTag from "@src/components/ActiveTag";
+import ActiveTag from "@src/components/active_tag";
 import Button from "@src/components/button";
 import productImagesState from "@src/recoil/product_images";
 import { randomColor } from "@src/utils/random_color";
