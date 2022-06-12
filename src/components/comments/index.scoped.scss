@@ -22,3 +22,30 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .comment-box {
+    border-bottom: 1px solid var(--neutral-03);
+    padding-bottom: 27px;
+    margin-bottom: 22px;
+
+    .content-box {
+      margin-left: 12px;
+
+      font-size: 15px;
+      color: var(--neutral-07);
+      span.gray {
+        color: var(--neutral-shades-04-75);
+      }
+      .linked-product {
+        margin: 0px 0 8px;
+      }
+      .content {
+        margin-bottom: 18px;
+      }
+      .btn-group {
+        cursor: pointer;
+      }
+    }
+  }
+}

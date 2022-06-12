@@ -7,6 +7,7 @@
 }
 
 .product-title {
+  flex: 1;
   font-size: 15px;
   line-height: 1.4;
   color: var(--neutral-07);
@@ -15,4 +16,14 @@
 .product-earning {
   font-size: 15px;
   color: var(--neutral-07);
+}
+
+@media screen and (max-width: 500px) {
+  .product-cover {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 12px;
+  }
 }

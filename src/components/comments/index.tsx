@@ -61,9 +61,21 @@ const Comments = memo(() => {
                 <span className="before gray">{item.before}</span>
               </div>
               <div className="btn-group flex justify-between items-center">
-                <MessageLight color={colors["neutral-shades-04-75"]} />
-                <HeartLight color={colors["neutral-shades-04-75"]} />
-                <LinkLight color={colors["neutral-shades-04-75"]} />
+                <MessageLight
+                  width={18}
+                  height={18}
+                  color={colors["neutral-shades-04-75"]}
+                />
+                <HeartLight
+                  width={18}
+                  height={18}
+                  color={colors["neutral-shades-04-75"]}
+                />
+                <LinkLight
+                  width={18}
+                  height={18}
+                  color={colors["neutral-shades-04-75"]}
+                />
               </div>
             </div>
           </div>

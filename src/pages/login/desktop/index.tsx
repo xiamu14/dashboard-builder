@@ -1,10 +1,7 @@
 import config from "@src/config";
-import { colors, DashboardEntryPath } from "@src/constant";
-import userModel from "@src/model/user";
-import { getHashParams } from "@src/utils";
+import { colors } from "@src/constant";
 import { CheckCircledLight } from "maple-icons";
-import React, { useCallback, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
 import SignUp from "../components/sign_up";
 import { BaseProps } from "../types";
 import { createWechatLoginUrl } from "../utils";
@@ -15,33 +12,6 @@ const wechatLoginUrl = createWechatLoginUrl(config.wechatLoginUrlInfo);
 export default function LoginDesktop({ onSignUp }: BaseProps) {
   const [errorText, setErrorText] = useState<String>();
   const [hideWechatLogin, setHideWechatLogin] = useState(true);
-  const history = useHistory();
-
-  const handleLogin = useCallback(
-    async (code: string) => {
-      console.log("debug code", code);
-      try {
-        const { data } = { data: { token: "" } };
-        console.log("debug response", data);
-        // NOTE: 更新 api authTOken
-        userModel.userToken = data.token;
-        // userModel.userInfo = data;
-        history.push(DashboardEntryPath);
-      } catch (error) {}
-    },
-    [history]
-  );
-
-  useEffect(() => {
-    if (userModel.isLogin) {
-      history.push(DashboardEntryPath);
-    } else {
-      const hashParams = getHashParams<{ code: string }>();
-      if (hashParams?.code) {
-        handleLogin(hashParams.code);
-      }
-    }
-  }, [handleLogin, history]);
 
   return (
     <div className="login-page">

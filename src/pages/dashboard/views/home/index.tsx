@@ -239,19 +239,15 @@ export default function Home() {
                 <div className="flex justify-between items-center">
                   <div className="method flex justify-center items-center ">
                     <FacebookLight width={24} height={24} />
-                    <div className="w-14px" />
-                    <span>Facebook</span>
+                    {!isMobile ? <span>Facebook</span> : null}
                   </div>
                   <div className="method flex justify-center items-center">
                     <TwitterLight width={24} height={24} />
-                    <div className="w-14px" />
-                    <span>Twitter</span>
+                    {!isMobile ? <span>Twitter</span> : null}
                   </div>
                   <div className="method flex justify-center items-center">
                     <LogoInstagram width={24} height={24} />
-                    <div className="w-14px" />
-
-                    <span>Instagram</span>
+                    {!isMobile ? <span>Instagram</span> : null}
                   </div>
                 </div>
               </div>
