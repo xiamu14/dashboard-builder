@@ -10,6 +10,7 @@ specifiers:
   '@babel/preset-react': ^7.14.5
   '@babel/traverse': ^7.17.9
   '@babel/types': ^7.17.0
+  '@redchili/postcss-pxtorem': ^1.0.1-alpha.4
   '@redchili/storage-util': 0.0.3
   '@svgr/core': ^6.2.1
   '@svgr/plugin-jsx': ^6.2.1
@@ -50,7 +51,6 @@ specifiers:
   maple-icons: 0.0.8-alpha.0
   nanoid: ^3.1.30
   postcss: ^8.4.12
-  postcss-pxtorem: ^6.0.0
   prettier: ^2.6.2
   prop-types: ^15.6.0
   react: 17.0.0
@@ -127,6 +127,7 @@ devDependencies:
   '@babel/parser': 7.17.9
   '@babel/traverse': 7.17.9
   '@babel/types': 7.17.0
+  '@redchili/postcss-pxtorem': registry.npmjs.org/@redchili/postcss-pxtorem/1.0.1-alpha.4_postcss@8.4.12
   '@svgr/core': 6.2.1
   '@svgr/plugin-jsx': 6.2.1_@svgr+core@6.2.1
   '@svgr/plugin-prettier': 6.1.2_@svgr+core@6.2.1
@@ -143,7 +144,6 @@ devDependencies:
   eslint-plugin-react-hooks: 4.3.0_eslint@7.32.0
   husky: 7.0.4
   postcss: 8.4.12
-  postcss-pxtorem: 6.0.0_postcss@8.4.12
   prettier: 2.6.2
 
 packages:
@@ -5940,14 +5940,6 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /postcss-pxtorem/6.0.0_postcss@8.4.12:
-    resolution: {integrity: sha512-ZRXrD7MLLjLk2RNGV6UA4f5Y7gy+a/j1EqjAfp9NdcNYVjUMvg5HTYduTjSkKBkRkfqbg/iKrjMO70V4g1LZeg==}
-    peerDependencies:
-      postcss: ^8.0.0
-    dependencies:
-      postcss: 8.4.12
-    dev: true
-
   /postcss-selector-parser/6.0.9:
     resolution: {integrity: sha512-UO3SgnZOVTwu4kyLR22UQ1xZh086RyNZppb7lLAKBFK8a32ttG5i87Y/P3+2bRSjZNyJ1B7hfFNo273tKe9YxQ==}
     engines: {node: '>=4'}
@@ -8175,6 +8167,17 @@ packages:
       '@emotion/memoize': 0.7.5
     dev: false
 
+  registry.npmjs.org/@redchili/postcss-pxtorem/1.0.1-alpha.4_postcss@8.4.12:
+    resolution: {integrity: sha512-wNqXEfz6IwtImsfUd0jsLP1raK6+QOmsddIpc8wAFXisdhoqH/cwBXlXxpCKTCTaWX68zIYlszjtlpOSdRsEog==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@redchili/postcss-pxtorem/-/postcss-pxtorem-1.0.1-alpha.4.tgz}
+    id: registry.npmjs.org/@redchili/postcss-pxtorem/1.0.1-alpha.4
+    name: '@redchili/postcss-pxtorem'
+    version: 1.0.1-alpha.4
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      postcss: 8.4.12
+    dev: true
+
   registry.npmjs.org/@svgr/babel-plugin-add-jsx-attribute/6.0.0_@babel+core@7.16.10:
     resolution: {integrity: sha512-MdPdhdWLtQsjd29Wa4pABdhWbaRMACdM1h31BY+c6FghTZqNGT7pEYdBoaGeKtdTOBC/XNFQaKVj+r/Ei2ryWA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-6.0.0.tgz}
     id: registry.npmjs.org/@svgr/babel-plugin-add-jsx-attribute/6.0.0
@@ -8999,7 +9002,7 @@ packages:
     dev: true
 
   registry.npmjs.org/image-size/0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/image-size/-/image-size-0.5.5.tgz}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/image-size/-/image-size-0.5.5.tgz}
     name: image-size
     version: 0.5.5
     engines: {node: '>=0.10.0'}
