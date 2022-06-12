@@ -1,12 +1,9 @@
 import SignUp from "@src/pages/login/components/sign_up";
 import React, { memo } from "react";
-import { useHistory } from "react-router-dom";
 import { BaseProps } from "../types";
 import "./index.scoped.scss";
 
 const LoginMobile = memo(({ onSignUp }: BaseProps) => {
-  const history = useHistory();
-
   return (
     <div className="flex-col flex h-100vh">
       <div className="sign-in-box flex justify-between">

@@ -53,7 +53,7 @@ export default function LoginDesktop({ onSignUp }: BaseProps) {
             <div className="h-1" />
           </div>
         </div>
-        <div className="flex-1 container">
+        <div className="flex-1 login-container">
           <div className="sign-in">
             <span className="question">Already a member ?</span>
             <span>Sign in</span>

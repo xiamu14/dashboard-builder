@@ -67,7 +67,7 @@ const HeaderMobile = memo(
           >
             {icon}
           </IconPlate>
-          <p className="flex justify-start items-center">
+          <p className="flex justify-start items-center flex-1">
             <span className="desc">{desc}</span>
             <AlertCircledFilled width={13} height={13} />
           </p>
