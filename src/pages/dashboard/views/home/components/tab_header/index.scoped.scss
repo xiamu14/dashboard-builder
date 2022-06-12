@@ -20,3 +20,26 @@
     line-height: 1;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .tab-header-box {
+    padding: 14px;
+
+    ::v-deep .icon {
+      width: 26px;
+      height: 26px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    .desc {
+      margin-right: 5px;
+    }
+    .number {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+    .trend-tips-box {
+      position: inherit;
+    }
+  }
+}

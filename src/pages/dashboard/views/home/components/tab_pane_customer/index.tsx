@@ -1,6 +1,7 @@
 import Button from "@src/components/button";
 import IconPlate from "@src/components/icon_plate";
 import { colors } from "@src/constant";
+import { useMobile } from "@src/hooks/use_responsive";
 import { randomColor } from "@src/utils/random_color";
 import { Avatar } from "antd";
 import { DirectionRight } from "maple-icons";
@@ -8,6 +9,8 @@ import React, { memo } from "react";
 import "./index.scoped.scss";
 
 const TabPaneCustomer = memo(() => {
+  const isMobile = useMobile();
+
   return (
     <div className="tab-pane-box w-full flex flex-col justify-center">
       <div className="desc-box flex justify-between items-center">
@@ -17,7 +20,7 @@ const TabPaneCustomer = memo(() => {
           with a<br />
           personal message 😎
         </p>
-        <Button plain>Send message</Button>
+        <Button plain>{isMobile ? "Send" : " Send Message"}</Button>
       </div>
       <div className="gallery flex justify-around items-center">
         {["Glady", "Elbert", "Joyce"].map((item, index) => {

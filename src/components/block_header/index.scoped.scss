@@ -15,3 +15,19 @@
     line-height: 32px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .block-header {
+    margin-bottom: 28px;
+    .color-block {
+      width: 16px;
+      height: 32px;
+      margin-right: 16px;
+      border-radius: 4px;
+    }
+    .title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+}

@@ -3,9 +3,11 @@ import Button from "@src/components/button";
 import Comments from "@src/components/comments";
 import ContentBox from "@src/components/content_box";
 import IconPlate from "@src/components/icon_plate";
+import Responsive from "@src/components/responsive";
 import Tab from "@src/components/tab";
 import Tag from "@src/components/tag";
 import { colors } from "@src/constant";
+import { useMobile } from "@src/hooks/use_responsive";
 import { randomColor } from "@src/utils/random_color";
 import { Avatar } from "antd";
 import {
@@ -31,6 +33,7 @@ import TabPaneCustomer from "./components/tab_pane_customer";
 import "./index.scoped.scss";
 
 export default function Home() {
+  const isMobile = useMobile();
   const tips = [
     {
       icon: (
@@ -97,7 +100,7 @@ export default function Home() {
       <div className="area-box grid">
         <div className="area-item grid">
           <div className="grid">
-            <div className="item atom-desktop-block">
+            <div className="item dashboard-card-block">
               <BlockHeader bgColor={colors["secondary-01"]} title="Overflow" />
               <div className="content-box">
                 <Tab
@@ -111,10 +114,21 @@ export default function Home() {
                           isRise={false}
                           percent={35.8}
                           icon={
-                            <ShoppingBagLight
-                              width={20}
-                              height={20}
-                              color={colors["neutral-07"]}
+                            <Responsive
+                              desktop={
+                                <ShoppingBagLight
+                                  width={20}
+                                  height={20}
+                                  color={colors["neutral-07"]}
+                                />
+                              }
+                              mobile={
+                                <ShoppingBagLight
+                                  width={14}
+                                  height={14}
+                                  color={colors["neutral-07"]}
+                                />
+                              }
                             />
                           }
                           iconPlateBg={colors["secondary-03"]}
@@ -131,10 +145,21 @@ export default function Home() {
                           isRise
                           percent={12.8}
                           icon={
-                            <ActivityLight
-                              width={20}
-                              height={20}
-                              color={colors["neutral-07"]}
+                            <Responsive
+                              desktop={
+                                <ActivityLight
+                                  width={20}
+                                  height={20}
+                                  color={colors["neutral-07"]}
+                                />
+                              }
+                              mobile={
+                                <ActivityLight
+                                  width={14}
+                                  height={14}
+                                  color={colors["neutral-07"]}
+                                />
+                              }
                             />
                           }
                           iconPlateBg={colors["secondary-02"]}
@@ -146,16 +171,19 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="item atom-desktop-block">
+            <div className="item dashboard-card-block">
               <BlockHeader
                 bgColor={colors["secondary-02"]}
                 title="Product views"
               />
-              <div className="content-box h-180px">
+              <div
+                className="content-box"
+                style={{ height: isMobile ? "140px" : "180px" }}
+              >
                 <ProductViewsBarChart />
               </div>
             </div>
-            <div className="item atom-desktop-block pro-tips-box">
+            <div className="item dashboard-card-block pro-tips-box">
               <BlockHeader bgColor={colors["secondary-04"]} title="Pro tips" />
               <div className="content-box">
                 <p className="desc">Need some ideas for the next product?</p>
@@ -197,7 +225,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="item atom-desktop-block link-box">
+            <div className="item dashboard-card-block link-box">
               <BlockHeader
                 bgColor={colors["secondary-03"]}
                 title="Get more customers!"
@@ -232,21 +260,21 @@ export default function Home() {
         </div>
         <div className="area-item">
           <div className="grid">
-            <div className="item atom-desktop-block">
+            <div className="item dashboard-card-block">
               <BlockHeader
                 bgColor={colors["secondary-03"]}
                 title="Popular products"
               />
               <PopularProductsTable />
             </div>
-            <div className="item atom-desktop-block">
+            <div className="item dashboard-card-block">
               <BlockHeader bgColor={colors["secondary-05"]} title="Comments" />
               <Comments />
               <Button className="!w-full" plain>
                 View all
               </Button>
             </div>
-            <div className="item atom-desktop-block refund-requests-box">
+            <div className="item dashboard-card-block refund-requests-box">
               <BlockHeader
                 bgColor={colors["secondary-01"]}
                 title="Refund requests"

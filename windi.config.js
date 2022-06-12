@@ -12,6 +12,9 @@ export default {
   theme: {
     extend: {
       colors: colorVariables,
+      screens: {
+        mobile: "500.1px",
+      },
     },
   },
 };

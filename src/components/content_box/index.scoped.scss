@@ -44,3 +44,27 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .motion-wrapper {
+    .content-box {
+      .content-wrapper {
+        padding: 16px;
+        .content-title {
+          height: 60px;
+          font-size: 24px;
+          margin-bottom: 24px;
+        }
+      }
+      .banner-wrapper {
+        .banner {
+          height: 400px;
+        }
+        .content {
+          padding: 28px;
+          margin-top: -160px;
+        }
+      }
+    }
+  }
+}

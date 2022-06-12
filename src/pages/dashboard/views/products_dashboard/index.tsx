@@ -13,7 +13,7 @@ export default function ProductsDashboard() {
   return (
     <ContentBox title="Products dashboard" className=" overflow-y-scroll">
       <div className="grid">
-        <div className="grid-item-1 atom-desktop-block">
+        <div className="grid-item-1 dashboard-card-block">
           <BlockHeader bgColor={colors["secondary-02"]} title="Overview" />
           <div className="statistic-box flex justify-between">
             <Statistic
@@ -78,20 +78,20 @@ export default function ProductsDashboard() {
             />
           </div>
         </div>
-        <div className="grid-item-2 atom-desktop-block">
+        <div className="grid-item-2 dashboard-card-block">
           <BlockHeader
             bgColor={colors["secondary-04"]}
             title="Product activity"
           />
           <ProductActivityTable />
         </div>
-        <div className="grid-item-3 atom-desktop-block">
+        <div className="grid-item-3 dashboard-card-block">
           <BlockHeader bgColor={colors["secondary-03"]} title="Product views" />
           <div className="w-full h-180px">
             <ProductViewsBarChart />
           </div>
         </div>
-        <div className="grid-item-4 atom-desktop-block">
+        <div className="grid-item-4 dashboard-card-block">
           <BlockHeader bgColor={colors["secondary-02"]} title="Products" />
           <div className="flex-1">
             <ProductsTable />

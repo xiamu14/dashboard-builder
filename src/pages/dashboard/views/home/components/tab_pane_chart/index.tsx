@@ -1,4 +1,5 @@
 import { colors } from "@src/constant";
+import { useMobile } from "@src/hooks/use_responsive";
 import React, { memo } from "react";
 import {
   CartesianGrid,
@@ -38,8 +39,9 @@ const data = [
 ];
 
 const TabPaneChart = memo(() => {
+  const isMobile = useMobile();
   return (
-    <div className="w-full h-260px">
+    <div className="w-full" style={{ height: isMobile ? "160px" : "260px" }}>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}

@@ -1,4 +1,4 @@
-.trend-tips-box {
+.trend-tips-inner-box {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -9,5 +9,21 @@
   border-radius: 4px;
   .percent {
     margin: 0 4px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .trend-tips-inner-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    height: 24px;
+    padding: 4px 8px;
+    background: var(--neutral-01);
+    border-radius: 4px;
+    .percent {
+      margin: 0 4px;
+    }
   }
 }

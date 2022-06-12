@@ -1,8 +1,3 @@
-.content-box {
-  width: 624px;
-  margin: 0 auto;
-}
-
 .area-box {
   grid-template-columns: 2fr 1fr;
   grid-auto-rows: min-content;
@@ -18,6 +13,10 @@
         grid-template-rows: repeat(3, auto);
       }
     }
+  }
+  .content-box {
+    width: 624px;
+    margin: 0 auto;
   }
   .link-box {
     .desc {
@@ -94,6 +93,21 @@
       span.gray {
         color: var(--neutral-04);
       }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .area-box {
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    .area-item {
+      > div {
+        grid-row-gap: 8px;
+      }
+    }
+    .content-box {
+      width: 100%;
     }
   }
 }

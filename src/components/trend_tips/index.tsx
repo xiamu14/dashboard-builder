@@ -18,7 +18,7 @@ const TrendTips = memo(
   }) => {
     return (
       <div
-        className={`trend-tips-box ${className ?? ""}`}
+        className={`trend-tips-inner-box ${className ?? ""}`}
         style={{
           backgroundColor: isRise
             ? colors["secondary-04"]

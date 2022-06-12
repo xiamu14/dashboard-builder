@@ -57,3 +57,17 @@ export function cssTemplate(
   });
   return result as CSSProperties;
 }
+
+export function pxToRem(w: number) {
+  const screenWidth = window.innerWidth;
+  const media = {
+    mobile: {
+      breakPoint: 500,
+      rootValue: 37.5,
+    },
+  };
+  if (screenWidth <= media.mobile.breakPoint) {
+    const remValue = (w / 37.5).toFixed(3);
+    return `${remValue}rem`;
+  }
+}

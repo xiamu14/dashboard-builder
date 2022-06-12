@@ -19,7 +19,7 @@ export default function IncomeEarning() {
   return (
     <ContentBox title="Earning" className="overflow-y-scroll">
       <div className="earning-box grid">
-        <div className="atom-desktop-block item1">
+        <div className="dashboard-card-block item1">
           <div className="statistic-box flex justify-between">
             <Statistic
               icon={
@@ -85,13 +85,13 @@ export default function IncomeEarning() {
             />
           </div>
         </div>
-        <div className="atom-desktop-block item2">
+        <div className="dashboard-card-block item2">
           <BlockHeader bgColor={colors["secondary-02"]} title="Product sales" />
           <div className="w-full h-270px">
             <ProductViewsBarChart />
           </div>
         </div>
-        <div className="atom-desktop-block item3">
+        <div className="dashboard-card-block item3">
           <BlockHeader
             bgColor={colors["secondary-03"]}
             title="Product countries"
@@ -140,7 +140,7 @@ export default function IncomeEarning() {
             })}
           </div>
         </div>
-        <div className="atom-desktop-block item4">
+        <div className="dashboard-card-block item4">
           <ProductActivityTable />
         </div>
       </div>

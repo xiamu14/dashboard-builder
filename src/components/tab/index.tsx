@@ -42,21 +42,23 @@ const Tab = memo(({ tabs, defaultActiveIndex = 0 }: Props) => {
   return (
     <TabContext.Provider value={contextValue}>
       <div className="tab-box">
-        <div className="tab-header">
-          <div className="tab-header-wrapper flex w-full h-full">
-            {tabs.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className="tab-header-item h-full flex justify-center items-center"
-                  onClick={() => handleCheck(index)}
-                >
-                  {item.header}
-                </div>
-              );
-            })}
+        <div className="tab-header-box">
+          <div className="tab-header-wrapper">
+            <div className="tab-header flex w-full h-full">
+              {tabs.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="tab-header-item h-full flex justify-center items-center"
+                    onClick={() => handleCheck(index)}
+                  >
+                    {item.header}
+                  </div>
+                );
+              })}
+            </div>
+            <span className="glider" style={{ transform: gliderMoveCss }} />
           </div>
-          <span className="glider" style={{ transform: gliderMoveCss }} />
         </div>
         <div className="tab-pane w-full flex">
           {tabs.map((item, index) => {
