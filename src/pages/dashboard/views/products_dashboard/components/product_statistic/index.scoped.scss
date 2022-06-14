@@ -1,0 +1,14 @@
+@media screen and (max-width: 500px) {
+  .statistic-box {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .statistic-wrapper {
+      width: fit-content;
+      display: flex;
+      padding-bottom: 10px;
+      > div:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

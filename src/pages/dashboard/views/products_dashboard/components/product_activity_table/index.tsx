@@ -1,7 +1,8 @@
 import Trend from "@src/components/trend";
 import { TrendType } from "@src/components/trend/types";
+import { useMobile } from "@src/hooks/use_responsive";
 import { Table, TableColumnsType } from "antd";
-import React, { memo } from "react";
+import React, { memo, useMemo } from "react";
 import "./index.scss";
 
 interface DataItemType {
@@ -31,48 +32,67 @@ const data: DataItemType[] = [
     comments: { current: "16" },
   },
 ];
-
-const columns: TableColumnsType<DataItemType> = [
-  {
-    title: "Week",
-    dataIndex: "week",
-    key: "week",
-  },
-  {
-    title: "Products",
-    dataIndex: "products",
-    key: "products",
-    render: (products: TrendType) => {
-      return Trend(products);
-    },
-  },
-  {
-    title: "Views",
-    dataIndex: "views",
-    key: "views",
-    render: (views: TrendType) => {
-      return Trend(views);
-    },
-  },
-  {
-    title: "Likes",
-    dataIndex: "likes",
-    key: "likes",
-    render: (likes: TrendType) => {
-      return Trend(likes);
-    },
-  },
-  {
-    title: "Comments",
-    key: "comments",
-    dataIndex: "comments",
-    render: (comments: TrendType) => {
-      return Trend(comments);
-    },
-  },
-];
-
 const ProductActivityTable = memo(() => {
+  const isMobile = useMobile();
+
+  const columns = useMemo<TableColumnsType<DataItemType>>(() => {
+    return isMobile
+      ? [
+          {
+            title: "Week",
+            dataIndex: "week",
+            key: "week",
+          },
+          {
+            title: "Products",
+            dataIndex: "products",
+            key: "products",
+            render: (products: TrendType) => {
+              return Trend(products);
+            },
+          },
+        ]
+      : [
+          {
+            title: "Week",
+            dataIndex: "week",
+            key: "week",
+          },
+          {
+            title: "Products",
+            dataIndex: "products",
+            key: "products",
+            render: (products: TrendType) => {
+              return Trend(products);
+            },
+          },
+          {
+            title: "Views",
+            dataIndex: "views",
+            key: "views",
+            render: (views: TrendType) => {
+              return Trend(views);
+            },
+          },
+          {
+            title: "Likes",
+            dataIndex: "likes",
+            key: "likes",
+            render: (likes: TrendType) => {
+              return Trend(likes);
+            },
+          },
+          {
+            title: "Comments",
+            key: "comments",
+            dataIndex: "comments",
+            render: (comments: TrendType) => {
+              return Trend(comments);
+            },
+          },
+        ];
+  }, [isMobile]);
+
   return (
     <div className="product-activity-table">
       <Table dataSource={data} columns={columns} pagination={false} />

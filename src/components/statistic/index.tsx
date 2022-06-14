@@ -44,7 +44,7 @@ const Statistic = React.memo(
     return (
       <AspectDiv width={width} height={height}>
         <div
-          className={`flex statistic-box ${className ?? ""}`}
+          className={`flex statistic-inner-box ${className ?? ""}`}
           style={{ backgroundColor: rgba(bgColor, 0.25), ...style }}
         >
           <div className="weekly-data">

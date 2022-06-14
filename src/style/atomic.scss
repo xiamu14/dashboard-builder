@@ -11,5 +11,7 @@
   .dashboard-card-block {
     border-radius: 8px;
     padding: 20px 16px 16px;
+    width: 100%;
+    overflow-x: hidden;
   }
 }
