@@ -57,6 +57,7 @@ specifiers:
   react-dom: 17.0.0
   react-responsive: ^9.0.0-beta.6
   react-router-dom: 5.3.0
+  react-virtuoso: ^2.14.0
   recharts: ^2.1.9
   recoil: 0.7.2
   rollup-plugin-react-scoped-css: ^0.2.3
@@ -106,6 +107,7 @@ dependencies:
   react-dom: 17.0.0_react@17.0.0
   react-responsive: 9.0.0-beta.6_react@17.0.0
   react-router-dom: 5.3.0_react@17.0.0
+  react-virtuoso: registry.npmjs.org/react-virtuoso/2.14.0_q3ro2d4tisdm4fljj6b5phevaq
   recharts: 2.1.9_ot245mb2bw4ea4pazk7kb2xxaa
   recoil: registry.npmjs.org/recoil/0.7.2_q3ro2d4tisdm4fljj6b5phevaq
   rollup-plugin-react-scoped-css: 0.2.3
@@ -8520,6 +8522,25 @@ packages:
     version: 4.0.0
     dev: true
 
+  registry.npmjs.org/@virtuoso.dev/react-urx/0.2.13_react@17.0.0:
+    resolution: {integrity: sha512-MY0ugBDjFb5Xt8v2HY7MKcRGqw/3gTpMlLXId2EwQvYJoC8sP7nnXjAxcBtTB50KTZhO0SbzsFimaZ7pSdApwA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@virtuoso.dev/react-urx/-/react-urx-0.2.13.tgz}
+    id: registry.npmjs.org/@virtuoso.dev/react-urx/0.2.13
+    name: '@virtuoso.dev/react-urx'
+    version: 0.2.13
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      '@virtuoso.dev/urx': registry.npmjs.org/@virtuoso.dev/urx/0.2.13
+      react: 17.0.0
+    dev: false
+
+  registry.npmjs.org/@virtuoso.dev/urx/0.2.13:
+    resolution: {integrity: sha512-iirJNv92A1ZWxoOHHDYW/1KPoi83939o83iUBQHIim0i3tMeSKEh+bxhJdTHQ86Mr4uXx9xGUTq69cp52ZP8Xw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@virtuoso.dev/urx/-/urx-0.2.13.tgz}
+    name: '@virtuoso.dev/urx'
+    version: 0.2.13
+    dev: false
+
   registry.npmjs.org/ansi-styles/3.2.1:
     resolution: {integrity: sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/ansi-styles/-/ansi-styles-3.2.1.tgz}
     name: ansi-styles
@@ -9181,6 +9202,22 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
     requiresBuild: true
+
+  registry.npmjs.org/react-virtuoso/2.14.0_q3ro2d4tisdm4fljj6b5phevaq:
+    resolution: {integrity: sha512-Pk3TL0KkWQs2pswDG2tA9SKx8q/59UFShKrGvTdnpt0dYQKTl1Zjlbl2ItTOfqx9sFAqX/U5acCrIBPQIFSGUw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/react-virtuoso/-/react-virtuoso-2.14.0.tgz}
+    id: registry.npmjs.org/react-virtuoso/2.14.0
+    name: react-virtuoso
+    version: 2.14.0
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16 || >=17 || >= 18'
+      react-dom: '>=16 || >=17 || >= 18'
+    dependencies:
+      '@virtuoso.dev/react-urx': registry.npmjs.org/@virtuoso.dev/react-urx/0.2.13_react@17.0.0
+      '@virtuoso.dev/urx': registry.npmjs.org/@virtuoso.dev/urx/0.2.13
+      react: 17.0.0
+      react-dom: 17.0.0_react@17.0.0
+    dev: false
 
   registry.npmjs.org/recoil/0.7.2_q3ro2d4tisdm4fljj6b5phevaq:
     resolution: {integrity: sha512-OT4pI7FOUHcIoRtjsL5Lqq+lFFzQfir4MIbUkqyJ3nqv3WfBP1pHepyurqTsK5gw+T+I2R8+uOD28yH+Lg5o4g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/recoil/-/recoil-0.7.2.tgz}

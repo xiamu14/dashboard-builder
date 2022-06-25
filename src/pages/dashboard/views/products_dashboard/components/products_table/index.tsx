@@ -1,32 +1,18 @@
 import ActiveTag from "@src/components/active_tag";
+import Responsive from "@src/components/responsive";
 import Tag from "@src/components/tag";
 import Trend from "@src/components/trend";
 import { TrendType } from "@src/components/trend/types";
 import productImagesState from "@src/recoil/product_images";
 import { Table, TableColumnsType } from "antd";
-import React, { memo, useMemo } from "react";
+import React, { memo, useCallback, useMemo } from "react";
+import { Virtuoso } from "react-virtuoso";
 import { useRecoilValue } from "recoil";
 import "./index.scoped.scss";
+import ProductTableItem from "./product_table_item";
+import { ProductDetail } from "./types";
 
-interface ProductType {
-  key: string;
-  product: {
-    image: string;
-    name: string;
-    desc: string;
-  };
-  status: { isActive: boolean };
-  price: string;
-  sales: {
-    current: string;
-    isRise: boolean;
-    percent: number;
-  };
-  views: string;
-  likes: string;
-}
-
-const columns: TableColumnsType<ProductType> = [
+const columns: TableColumnsType<ProductDetail> = [
   {
     title: "Product",
     dataIndex: "product",
@@ -81,7 +67,7 @@ const columns: TableColumnsType<ProductType> = [
 const ProductsTable = memo(() => {
   const productImages = useRecoilValue(productImagesState);
 
-  const fullDataSource = useMemo(() => {
+  const fullDataSource = useMemo<ProductDetail[]>(() => {
     if (productImages.length > 0) {
       return new Array(6).fill(null).map((_, index) => {
         return {
@@ -94,7 +80,7 @@ const ProductsTable = memo(() => {
           status: { isActive: true },
           price: "$48",
           sales: {
-            current: "#3,200",
+            current: "$3,200",
             isRise: true,
             percent: 55.8,
           },
@@ -106,13 +92,33 @@ const ProductsTable = memo(() => {
     return [];
   }, [productImages]);
 
+  const itemContentFn = useCallback(
+    (index) => (
+      <ProductTableItem
+        detail={fullDataSource[index]}
+        isLast={index === fullDataSource.length - 1}
+      />
+    ),
+    [fullDataSource]
+  );
+
   return (
-    <Table
-      dataSource={fullDataSource}
-      columns={columns}
-      pagination={{ size: "small", hideOnSinglePage: true }}
-      rowKey="key"
-      rowSelection={{}}
+    <Responsive
+      desktop={
+        <Table
+          dataSource={fullDataSource}
+          columns={columns}
+          pagination={{ size: "small", hideOnSinglePage: true }}
+          rowKey="key"
+        />
+      }
+      mobile={
+        <Virtuoso
+          style={{ height: "400px" }}
+          totalCount={6}
+          itemContent={itemContentFn}
+        />
+      }
     />
   );
 });
