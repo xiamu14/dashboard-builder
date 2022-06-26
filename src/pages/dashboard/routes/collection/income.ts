@@ -2,7 +2,7 @@ import IncomeEarning from "@src/pages/dashboard/views/income_earning";
 import { PieChartLight } from "maple-icons";
 import { createRoutes } from "../utils";
 
-const power = "earning";
+const power = "incoming";
 
 const routes = createRoutes<"earning">(power, {
   earning: {

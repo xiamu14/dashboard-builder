@@ -10,17 +10,20 @@ import {
 import IconPlate from "@src/components/icon_plate";
 import Statistic from "@src/components/statistic";
 import { colors } from "@src/constant";
+import { useMobile } from "@src/hooks/use_responsive";
 import ProductViewsBarChart from "@src/pages/dashboard/views/home/components/product_views_bar_chart";
 import ProductActivityTable from "@src/pages/dashboard/views/products_dashboard/components/product_activity_table";
+import { pxToRem } from "@src/utils/css";
 import { ActivityLight, PieChartLight, ShoppingBagLight } from "maple-icons";
 import React from "react";
 import "./index.scoped.scss";
 export default function IncomeEarning() {
+  const isMobile = useMobile();
   return (
     <ContentBox title="Earning" className="overflow-y-scroll">
       <div className="earning-box grid">
         <div className="dashboard-card-block item1">
-          <div className="statistic-box flex justify-between">
+          <div className="statistic-box">
             <Statistic
               icon={
                 <ActivityLight
@@ -30,7 +33,7 @@ export default function IncomeEarning() {
                 />
               }
               iconBgColor={colors["secondary-04"]}
-              width="31%"
+              width={isMobile ? "100%" : "31%"}
               height="60%"
               bgColor={colors["neutral-01"]}
               info="Earing"
@@ -40,7 +43,7 @@ export default function IncomeEarning() {
                 percent: 34.5,
                 desc: "this week",
               }}
-              className="border-right"
+              className={isMobile ? "border-bottom" : "border-right"}
             />
             <Statistic
               icon={
@@ -52,7 +55,7 @@ export default function IncomeEarning() {
               }
               iconBgColor={colors["secondary-02"]}
               bgColor={colors["neutral-01"]}
-              width="31%"
+              width={isMobile ? "100%" : "31%"}
               height="60%"
               info="Customer"
               number="$128"
@@ -61,7 +64,7 @@ export default function IncomeEarning() {
                 percent: 34.5,
                 desc: "this week",
               }}
-              className="border-right"
+              className={isMobile ? "border-bottom" : "border-right"}
             />
             <Statistic
               icon={
@@ -73,7 +76,7 @@ export default function IncomeEarning() {
               }
               iconBgColor={colors["secondary-03"]}
               bgColor={colors["neutral-01"]}
-              width="31%"
+              width={isMobile ? "100%" : "31%"}
               height="60%"
               info="Payouts"
               number="$128"
@@ -87,7 +90,7 @@ export default function IncomeEarning() {
         </div>
         <div className="dashboard-card-block item2">
           <BlockHeader bgColor={colors["secondary-02"]} title="Product sales" />
-          <div className="w-full h-270px">
+          <div className="w-full" style={{ height: pxToRem(180) }}>
             <ProductViewsBarChart />
           </div>
         </div>

@@ -65,9 +65,15 @@ export function pxToRem(w: number) {
       breakPoint: 500,
       rootValue: 37.5,
     },
+    desktop: {
+      rootValue: 144,
+    },
   };
   if (screenWidth <= media.mobile.breakPoint) {
-    const remValue = (w / 37.5).toFixed(3);
+    const remValue = (w / media.mobile.rootValue).toFixed(3);
+    return `${remValue}rem`;
+  } else {
+    const remValue = (w / media.desktop.rootValue).toFixed(3);
     return `${remValue}rem`;
   }
 }
