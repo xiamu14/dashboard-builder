@@ -1,6 +1,7 @@
 import AspectDiv from "@src/components/aspect_div";
 import Button from "@src/components/button";
 import ContentBox from "@src/components/content_box";
+import Responsive from "@src/components/responsive";
 import Tag from "@src/components/tag";
 import { colors } from "@src/constant";
 import productImagesState from "@src/recoil/product_images";
@@ -13,14 +14,14 @@ import {
   StarFilled,
   TwitterLight,
 } from "maple-icons";
-import React, { useMemo } from "react";
+import React, { memo, useMemo } from "react";
 import { useRecoilValue } from "recoil";
 import "./index.scoped.scss";
 
 const bannerUrl =
   "https://images.unsplash.com/photo-1627163439134-7a8c47e08208?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80";
 
-interface ShopProductType {
+interface ShopDetail {
   key: string;
   cover: string;
   name: string;
@@ -29,12 +30,64 @@ interface ShopProductType {
   price: string;
 }
 
-type DataType = ShopProductType[][];
+const ShopItem = memo(({ item }: { item: ShopDetail }) => {
+  return (
+    <div className="item">
+      <AspectDiv width="100%" height="65%">
+        <img className="product-picture" src={item.cover} />
+      </AspectDiv>
+      <div className="product-info flex justify-between items-start">
+        <div className="flex flex-col">
+          <p className="title">{item.name}</p>
+          <div className="flex justify-start items-center">
+            <StarFilled color={colors["primary-05"]} width={19} height={18} />
+            <p className="star-count">
+              {item.stars} <span className="gray">({item.views})</span>
+            </p>
+          </div>
+        </div>
+        <div>
+          <Tag color={randomColor("secondary-0", 5)}>{item.price}</Tag>
+        </div>
+      </div>
+    </div>
+  );
+});
+
+const ShopMobile = memo(({ data }: { data: ShopDetail[] }) => {
+  return (
+    <div className="product-list">
+      {data.map((item) => {
+        return <ShopItem key={item.key} item={item} />;
+      })}
+    </div>
+  );
+});
+
+const ShopDesktop = memo(({ data }: { data: ShopDetail[][] }) => {
+  return (
+    <div className="product-list w-full flex flex-col justify-center items-center">
+      {data.map((itemCol, index) => {
+        return (
+          <div
+            key={index}
+            className="col-item flex w-full justify-between items-center"
+          >
+            {itemCol.map((item) => {
+              return <ShopItem key={item.key} item={item} />;
+            })}
+          </div>
+        );
+      })}
+      <Button plain>Load more</Button>
+    </div>
+  );
+});
 
 export default function Shop() {
   const productImages = useRecoilValue(productImagesState);
 
-  const fullDataSource = useMemo<DataType>(() => {
+  const fullDataSource = useMemo<ShopDetail[]>(() => {
     if (productImages.length > 0) {
       const dataSource = new Array(6).fill(null).map((_, index) => {
         return {
@@ -46,7 +99,7 @@ export default function Shop() {
           price: "$43",
         };
       });
-      return chunk(dataSource, 3);
+      return dataSource;
     }
     return [];
   }, [productImages]);
@@ -55,7 +108,7 @@ export default function Shop() {
     <div className="shop-box w-full h-full">
       <ContentBox className="shop-wrapper overflow-y-scroll" banner={bannerUrl}>
         <div className="shop-content-box h-full max-h-full ">
-          <div className="shopper-info flex justify-start justify-items-auto">
+          <div className="shopper-info flex justify-start justify-items-auto flex-wrap">
             <Avatar
               size={80}
               style={{
@@ -76,50 +129,10 @@ export default function Shop() {
             </Space>
           </div>
           <Divider />
-          <div>
-            <div className="product-list w-full flex flex-col justify-center items-center">
-              {fullDataSource.map((itemCol, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="col-item flex w-full justify-between items-center"
-                  >
-                    {itemCol.map((item) => {
-                      return (
-                        <div key={item.key} className="item">
-                          <AspectDiv width="100%" height="65%">
-                            <img className="product-picture" src={item.cover} />
-                          </AspectDiv>
-                          <div className="product-info flex justify-between items-start">
-                            <div className="flex flex-col">
-                              <p className="title">{item.name}</p>
-                              <div className="flex justify-start items-center">
-                                <StarFilled
-                                  color={colors["primary-05"]}
-                                  width={19}
-                                  height={18}
-                                />
-                                <p className="star-count">
-                                  {item.stars}{" "}
-                                  <span className="gray">({item.views})</span>
-                                </p>
-                              </div>
-                            </div>
-                            <div>
-                              <Tag color={randomColor("secondary-0", 5)}>
-                                {item.price}
-                              </Tag>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })}
-              <Button plain>Load more</Button>
-            </div>
-          </div>
+          <Responsive
+            mobile={<ShopMobile data={fullDataSource} />}
+            desktop={<ShopDesktop data={chunk(fullDataSource, 3)} />}
+          />
         </div>
       </ContentBox>
     </div>
