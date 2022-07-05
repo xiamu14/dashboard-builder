@@ -12,7 +12,8 @@ import Statistic from "@src/components/statistic";
 import { colors } from "@src/constant";
 import { useMobile } from "@src/hooks/use_responsive";
 import ProductViewsBarChart from "@src/pages/dashboard/views/home/components/product_views_bar_chart";
-import ProductActivityTable from "@src/pages/dashboard/views/products_dashboard/components/product_activity_table";
+import ProductSalesTable from "./components/product_sales_table";
+
 import { pxToRem } from "@src/utils/css";
 import { ActivityLight, PieChartLight, ShoppingBagLight } from "maple-icons";
 import React from "react";
@@ -90,7 +91,7 @@ export default function IncomeEarning() {
         </div>
         <div className="dashboard-card-block item2">
           <BlockHeader bgColor={colors["secondary-02"]} title="Product sales" />
-          <div className="w-full" style={{ height: pxToRem(180) }}>
+          <div className="w-full" style={{ height: pxToRem(240) }}>
             <ProductViewsBarChart />
           </div>
         </div>
@@ -144,7 +145,7 @@ export default function IncomeEarning() {
           </div>
         </div>
         <div className="dashboard-card-block item4">
-          <ProductActivityTable />
+          <ProductSalesTable />
         </div>
       </div>
     </ContentBox>
