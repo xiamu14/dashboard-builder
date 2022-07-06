@@ -70,9 +70,12 @@ const TableMobile = React.memo(({ data }: { data: ProductDetail[] }) => {
   const [totalCount, setTotalCount] = useState(6);
   const itemContentFn = useCallback(
     (index) => (
-      <ProductTableItem detail={data[index % 6]} isLast={index % 6 === 5} />
+      <ProductTableItem
+        detail={data[index % 6]}
+        isLast={index === totalCount - 1}
+      />
     ),
-    [data]
+    [data, totalCount]
   );
 
   const loadMore = useCallback(() => {
