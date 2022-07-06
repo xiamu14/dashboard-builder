@@ -8,16 +8,16 @@ import {
   FlagsUs,
 } from "@src/components/icon_flags";
 import IconPlate from "@src/components/icon_plate";
-import Statistic from "@src/components/statistic";
 import { colors } from "@src/constant";
 import { useMobile } from "@src/hooks/use_responsive";
-import ProductViewsBarChart from "@src/pages/dashboard/views/home/components/product_views_bar_chart";
-import ProductSalesTable from "./components/product_sales_table";
-
 import { pxToRem } from "@src/utils/css";
 import { ActivityLight, PieChartLight, ShoppingBagLight } from "maple-icons";
 import React from "react";
+import EarningStatistic from "./components/earning_statistic";
+import ProductSalesBarChart from "./components/product_sales_bar_chart";
+import ProductSalesTable from "./components/product_sales_table";
 import "./index.scoped.scss";
+
 export default function IncomeEarning() {
   const isMobile = useMobile();
   return (
@@ -25,7 +25,7 @@ export default function IncomeEarning() {
       <div className="earning-box grid">
         <div className="dashboard-card-block item1">
           <div className="statistic-box">
-            <Statistic
+            <EarningStatistic
               icon={
                 <ActivityLight
                   color={colors["neutral-07"]}
@@ -35,7 +35,7 @@ export default function IncomeEarning() {
               }
               iconBgColor={colors["secondary-04"]}
               width={isMobile ? "100%" : "31%"}
-              height="60%"
+              height={isMobile ? "46%" : "60%"}
               bgColor={colors["neutral-01"]}
               info="Earing"
               number="$128"
@@ -46,7 +46,7 @@ export default function IncomeEarning() {
               }}
               className={isMobile ? "border-bottom" : "border-right"}
             />
-            <Statistic
+            <EarningStatistic
               icon={
                 <PieChartLight
                   color={colors["neutral-07"]}
@@ -57,7 +57,7 @@ export default function IncomeEarning() {
               iconBgColor={colors["secondary-02"]}
               bgColor={colors["neutral-01"]}
               width={isMobile ? "100%" : "31%"}
-              height="60%"
+              height={isMobile ? "46%" : "60%"}
               info="Customer"
               number="$128"
               trendTipsProps={{
@@ -67,7 +67,7 @@ export default function IncomeEarning() {
               }}
               className={isMobile ? "border-bottom" : "border-right"}
             />
-            <Statistic
+            <EarningStatistic
               icon={
                 <ShoppingBagLight
                   color={colors["neutral-07"]}
@@ -78,7 +78,7 @@ export default function IncomeEarning() {
               iconBgColor={colors["secondary-03"]}
               bgColor={colors["neutral-01"]}
               width={isMobile ? "100%" : "31%"}
-              height="60%"
+              height={isMobile ? "46%" : "60%"}
               info="Payouts"
               number="$128"
               trendTipsProps={{
@@ -92,7 +92,7 @@ export default function IncomeEarning() {
         <div className="dashboard-card-block item2">
           <BlockHeader bgColor={colors["secondary-02"]} title="Product sales" />
           <div className="w-full" style={{ height: pxToRem(240) }}>
-            <ProductViewsBarChart />
+            <ProductSalesBarChart />
           </div>
         </div>
         <div className="dashboard-card-block item3">
