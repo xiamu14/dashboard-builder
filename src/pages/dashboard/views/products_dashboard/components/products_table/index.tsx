@@ -5,7 +5,8 @@ import Trend from "@src/components/trend";
 import { TrendType } from "@src/components/trend/types";
 import productImagesState from "@src/recoil/product_images";
 import { Table, TableColumnsType } from "antd";
-import React, { memo, useCallback, useMemo } from "react";
+import { LoaderFilled } from "maple-icons";
+import React, { memo, useCallback, useMemo, useState } from "react";
 import { Virtuoso } from "react-virtuoso";
 import { useRecoilValue } from "recoil";
 import "./index.scoped.scss";
@@ -64,6 +65,53 @@ const columns: TableColumnsType<ProductDetail> = [
   },
 ];
 
+const TableMobile = React.memo(({ data }: { data: ProductDetail[] }) => {
+  const [loading, setLoading] = useState(false);
+  const [totalCount, setTotalCount] = useState(6);
+  const itemContentFn = useCallback(
+    (index) => (
+      <ProductTableItem detail={data[index % 6]} isLast={index % 6 === 5} />
+    ),
+    [data]
+  );
+
+  const loadMore = useCallback(() => {
+    setLoading(true);
+    setTimeout(() => {
+      // eslint-disable-next-line max-nested-callbacks
+      setTotalCount((prev) => prev + 6);
+      setLoading(false);
+    }, 300);
+  }, []);
+
+  const Footer = React.memo(() => {
+    return (
+      <div className="load-more">
+        <button disabled={loading} onClick={loadMore}>
+          {loading ? (
+            <p className="loading">
+              <LoaderFilled />
+              Loading...
+            </p>
+          ) : (
+            "load more"
+          )}
+        </button>
+      </div>
+    );
+  });
+  return (
+    <Virtuoso
+      style={{ height: "400px" }}
+      totalCount={totalCount}
+      itemContent={itemContentFn}
+      components={{
+        Footer,
+      }}
+    />
+  );
+});
+
 const ProductsTable = memo(() => {
   const productImages = useRecoilValue(productImagesState);
 
@@ -92,16 +140,6 @@ const ProductsTable = memo(() => {
     return [];
   }, [productImages]);
 
-  const itemContentFn = useCallback(
-    (index) => (
-      <ProductTableItem
-        detail={fullDataSource[index]}
-        isLast={index === fullDataSource.length - 1}
-      />
-    ),
-    [fullDataSource]
-  );
-
   return (
     <Responsive
       desktop={
@@ -112,13 +150,7 @@ const ProductsTable = memo(() => {
           rowKey="key"
         />
       }
-      mobile={
-        <Virtuoso
-          style={{ height: "400px" }}
-          totalCount={6}
-          itemContent={itemContentFn}
-        />
-      }
+      mobile={<TableMobile data={fullDataSource} />}
     />
   );
 });
