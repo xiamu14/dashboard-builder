@@ -19,7 +19,7 @@ If you are looking for a high-quality free admin template that comes with all es
 1. git clone repository
 
 ```
-git clone https://github.com/xiamu14/antd-hero-preview.git
+git clone https://github.com/xiamu14/dashboard-builder.git
 ```
 
 2. download npm package
