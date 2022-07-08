@@ -61,7 +61,7 @@ export default defineConfig({
     }),
     injectHtml({
       data: {
-        title: env.VITE_APP_TITLE,
+        title: env?.VITE_APP_TITLE,
       },
     }),
     antdDayjs(),
