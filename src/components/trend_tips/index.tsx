@@ -21,7 +21,7 @@ const TrendTips = memo(
         className={`trend-tips-inner-box ${className ?? ""}`}
         style={{
           backgroundColor: isRise
-            ? colors["secondary-04"]
+            ? colors["secondary-07"]
             : colors["secondary-01"],
           ...(style ?? {}),
         }}

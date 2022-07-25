@@ -8,7 +8,7 @@ import { DirectionRight } from "maple-icons";
 import React, { memo } from "react";
 import "./index.scoped.scss";
 
-const TabPaneCustomer = memo(() => {
+const CustomerPart = memo(() => {
   const isMobile = useMobile();
 
   return (
@@ -59,4 +59,4 @@ const TabPaneCustomer = memo(() => {
   );
 });
 
-export default TabPaneCustomer;
+export default CustomerPart;

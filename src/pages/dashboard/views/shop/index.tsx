@@ -1,58 +1,19 @@
-import AspectDiv from "@src/components/aspect_div";
 import Button from "@src/components/button";
 import ContentBox from "@src/components/content_box";
 import Responsive from "@src/components/responsive";
-import Tag from "@src/components/tag";
-import { colors } from "@src/constant";
+import ShopItem from "@src/components/shop_item";
+import { ShopDetail } from "@src/model/shop";
 import productImagesState from "@src/recoil/product_images";
 import { randomColor } from "@src/utils/random_color";
 import { Avatar, Divider, Space } from "antd";
 import { chunk } from "lodash-es";
-import {
-  InstagramLight,
-  PinterestLight,
-  StarFilled,
-  TwitterLight,
-} from "maple-icons";
+import { InstagramLight, PinterestLight, TwitterLight } from "maple-icons";
 import React, { memo, useMemo } from "react";
 import { useRecoilValue } from "recoil";
 import "./index.scoped.scss";
 
 const bannerUrl =
   "https://images.unsplash.com/photo-1627163439134-7a8c47e08208?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80";
-
-interface ShopDetail {
-  key: string;
-  cover: string;
-  name: string;
-  stars: number;
-  views: number;
-  price: string;
-}
-
-const ShopItem = memo(({ item }: { item: ShopDetail }) => {
-  return (
-    <div className="item">
-      <AspectDiv width="100%" height="65%">
-        <img className="product-picture" src={item.cover} />
-      </AspectDiv>
-      <div className="product-info flex justify-between items-start">
-        <div className="flex flex-col">
-          <p className="title">{item.name}</p>
-          <div className="flex justify-start items-center">
-            <StarFilled color={colors["primary-05"]} width={19} height={18} />
-            <p className="star-count">
-              {item.stars} <span className="gray">({item.views})</span>
-            </p>
-          </div>
-        </div>
-        <div>
-          <Tag color={randomColor("secondary-0", 5)}>{item.price}</Tag>
-        </div>
-      </div>
-    </div>
-  );
-});
 
 const ShopMobile = memo(({ data }: { data: ShopDetail[] }) => {
   return (

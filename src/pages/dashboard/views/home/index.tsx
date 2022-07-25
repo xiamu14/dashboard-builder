@@ -2,8 +2,10 @@ import BlockHeader from "@src/components/block_header";
 import Button from "@src/components/button";
 import Comments from "@src/components/comments";
 import ContentBox from "@src/components/content_box";
+import CustomerPart from "@src/components/customer_part";
 import IconPlate from "@src/components/icon_plate";
 import Responsive from "@src/components/responsive";
+import ShareBySocial from "@src/components/share_by_social";
 import Tab from "@src/components/tab";
 import Tag from "@src/components/tag";
 import { colors } from "@src/constant";
@@ -15,13 +17,10 @@ import {
   BasketLight,
   DesignLight,
   DirectionRight,
-  FacebookLight,
-  LogoInstagram,
   MultiselectLight,
   PhoneLight,
   ScheduleLight,
   ShoppingBagLight,
-  TwitterLight,
   VideoRecorderLight,
 } from "maple-icons";
 import React from "react";
@@ -29,7 +28,6 @@ import PopularProductsTable from "./components/popular_products_table";
 import ProductViewsBarChart from "./components/product_views_bar_chart";
 import TabHeader from "./components/tab_header";
 import TabPaneChart from "./components/tab_pane_chart";
-import TabPaneCustomer from "./components/tab_pane_customer";
 import "./index.scoped.scss";
 
 export default function Home() {
@@ -134,7 +132,7 @@ export default function Home() {
                           iconPlateBg={colors["secondary-03"]}
                         />
                       ),
-                      pane: <TabPaneCustomer />,
+                      pane: <CustomerPart />,
                     },
                     {
                       header: (
@@ -231,25 +229,7 @@ export default function Home() {
                 title="Get more customers!"
               />
               <div className="content-box">
-                <p className="desc">
-                  50% of new customers explore products because the author
-                  sharing the work on the social media network. Gain your
-                  earnings right now! 🔥
-                </p>
-                <div className="flex justify-between items-center">
-                  <div className="method flex justify-center items-center ">
-                    <FacebookLight width={24} height={24} />
-                    {!isMobile ? <span>Facebook</span> : null}
-                  </div>
-                  <div className="method flex justify-center items-center">
-                    <TwitterLight width={24} height={24} />
-                    {!isMobile ? <span>Twitter</span> : null}
-                  </div>
-                  <div className="method flex justify-center items-center">
-                    <LogoInstagram width={24} height={24} />
-                    {!isMobile ? <span>Instagram</span> : null}
-                  </div>
-                </div>
+                <ShareBySocial />
               </div>
             </div>
           </div>

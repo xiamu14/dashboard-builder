@@ -1,4 +1,4 @@
-const colors = {
+export default {
   "neutral-01": "#fcfcfc",
   "primary-01": "#2a85ff",
   "neutral-06": "#272b30",
@@ -8,7 +8,7 @@ const colors = {
   "neutral-04": "#6f767e",
   "neutral-03": "#efefef",
   "secondary-04": "#b5e4ca",
-  "secondary-07": "#eaefe5",
+  "secondary-07": "#EAFAE5",
   "secondary-06": "#ffe7e4",
   "neutral-02": "#f4f4f4",
   "secondary-02": "#cabdff",
@@ -25,5 +25,3 @@ const colors = {
   "neutral-shade-dark-04-50": "#6f767e",
   "neutral-shade-dark-04-40": "rgba(111, 118, 126, 0.4)",
 };
-
-export default colors;
