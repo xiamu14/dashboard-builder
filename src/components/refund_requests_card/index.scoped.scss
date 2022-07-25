@@ -1,0 +1,38 @@
+.refund-requests-card {
+  .requests-box {
+    margin-bottom: 24px;
+  }
+  ::v-deep .icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+  }
+  .content {
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--neutral-07);
+    padding-top: 4px;
+    word-wrap: break-word;
+    span.gray {
+      color: var(--neutral-04);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .refund-requests-box {
+    .requests-box {
+      margin-bottom: 24px;
+    }
+    ::v-deep .icon {
+      width: 48px;
+      height: 48px;
+      margin-right: 12px;
+    }
+    .content {
+      font-size: 15px;
+      line-height: 1.4;
+      padding-top: 4px;
+    }
+  }
+}

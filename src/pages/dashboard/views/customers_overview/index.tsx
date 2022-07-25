@@ -1,16 +1,18 @@
 import BlockHeader from "@src/components/block_header";
 import ContentBox from "@src/components/content_box";
 import CustomerPart from "@src/components/customer_part";
+import RefundRequestsCard from "@src/components/refund_requests_card";
 import ShareBySocial from "@src/components/share_by_social";
 import ShopItem from "@src/components/shop_item";
 import { colors } from "@src/constant";
 import { ShopDetail } from "@src/model/shop";
-import TrafficChannelStatistic from "@src/pages/dashboard/views/customers_overview/components/traffic_channel_statistic";
 import productImagesState from "@src/recoil/product_images";
 import { Divider } from "antd";
 import React, { useMemo } from "react";
 import { useRecoilValue } from "recoil";
+import CountryStatistic from "./components/country_statistic";
 import CustomerStatistic from "./components/customers_statistic";
+import TrafficChannelStatistic from "./components/traffic_channel_statistic";
 import "./index.scoped.scss";
 
 const ShareProducts = React.memo(() => {
@@ -18,7 +20,7 @@ const ShareProducts = React.memo(() => {
 
   const fullDataSource = useMemo<ShopDetail[]>(() => {
     if (productImages.length > 0) {
-      const dataSource = new Array(2).fill(null).map((_, index) => {
+      const dataSource = new Array(3).fill(null).map((_, index) => {
         return {
           key: `${index}`,
           cover: productImages[index].urls.regular,
@@ -49,7 +51,7 @@ const CustomersOverview = React.memo(() => {
           <div className="grid">
             <div className="item dashboard-card-block">
               <BlockHeader bgColor={colors["secondary-01"]} title="Overflow" />
-              <div className="content-box">
+              <div>
                 <CustomerStatistic />
                 <CustomerPart />
               </div>
@@ -76,7 +78,37 @@ const CustomersOverview = React.memo(() => {
             </div>
           </div>
         </div>
-        <div className="area-item" />
+        <div className="area-item">
+          <div className="grid">
+            <div className="item dashboard-card-block">
+              <BlockHeader
+                bgColor={colors["secondary-01"]}
+                title="Refund requests"
+              />
+              <div>
+                <RefundRequestsCard />
+              </div>
+            </div>
+            <div className="item dashboard-card-block">
+              <BlockHeader
+                bgColor={colors["secondary-03"]}
+                title="Top device"
+              />
+            </div>
+            <div className="item dashboard-card-block">
+              <BlockHeader
+                bgColor={colors["secondary-02"]}
+                title="Top country"
+              />
+              <div>
+                <CountryStatistic />
+              </div>
+            </div>
+            <div className="item dashboard-card-block">
+              <BlockHeader bgColor={colors["secondary-02"]} title="Message" />
+            </div>
+          </div>
+        </div>
       </div>
     </ContentBox>
   );

@@ -4,6 +4,7 @@ import Comments from "@src/components/comments";
 import ContentBox from "@src/components/content_box";
 import CustomerPart from "@src/components/customer_part";
 import IconPlate from "@src/components/icon_plate";
+import RefundRequestsCard from "@src/components/refund_requests_card";
 import Responsive from "@src/components/responsive";
 import ShareBySocial from "@src/components/share_by_social";
 import Tab from "@src/components/tab";
@@ -14,7 +15,6 @@ import { randomColor } from "@src/utils/random_color";
 import { Avatar } from "antd";
 import {
   ActivityLight,
-  BasketLight,
   DesignLight,
   DirectionRight,
   MultiselectLight,
@@ -250,7 +250,7 @@ export default function Home() {
                 View all
               </Button>
             </div>
-            <div className="item dashboard-card-block refund-requests-box">
+            {/* <div className="item dashboard-card-block refund-requests-box">
               <BlockHeader
                 bgColor={colors["secondary-01"]}
                 title="Refund requests"
@@ -278,6 +278,15 @@ export default function Home() {
               <Button className="!w-full" plain>
                 Review refund requests
               </Button>
+            </div> */}
+            <div className="item dashboard-card-block">
+              <BlockHeader
+                bgColor={colors["secondary-01"]}
+                title="Refund requests"
+              />
+              <div>
+                <RefundRequestsCard />
+              </div>
             </div>
           </div>
         </div>
