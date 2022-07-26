@@ -15,7 +15,7 @@ import data from "./data";
 const TrafficChannelStatistic = React.memo(() => {
   const isMobile = useMobile();
   return (
-    <div className="w-full" style={{ height: isMobile ? "160px" : "260px" }}>
+    <div className="w-full" style={{ height: isMobile ? "220px" : "260px" }}>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}
