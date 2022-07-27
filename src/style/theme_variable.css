@@ -1,0 +1,17 @@
+.light-theme {
+  --page-background: var(--neutral-02);
+  --component-background: var(--neutral-01);
+}
+
+.dark-theme {
+  --page-background: var(--neutral-08);
+  --component-background: var(--neutral-07);
+}
+
+App.transition,
+App.transition *,
+App.transition *:before,
+App.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
