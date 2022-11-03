@@ -28,16 +28,19 @@ export default defineConfig({
     {
       use: [loadFile(`${config.routePath}/collection`)],
       machine: createRouter(),
+      name: "router",
     },
     {
       use: [loadFile("./src/style/color_variable.css")],
       machine: createColorVariable(),
+      name: "colors",
     },
     {
       use: [loadFile(`./src/assets/flags`)],
       machine: createReactSvg({
         output: "./src/components/icon_flags",
       }),
+      name: "icons",
     },
   ],
 });
